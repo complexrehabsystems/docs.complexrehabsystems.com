@@ -35,6 +35,7 @@ export default ( {data}) => {
   console.log(data);
   const headerInfo = data.allHeaderYaml.edges[0].node;
   const footerInfo = data.allFooterYaml.edges[0].node;
+  const sections = data.allSectionsYaml.edges.map(e => e.node);
 
   const RenderSection = (sectionInfo) => {
     return <div className="manual-section">
@@ -67,6 +68,8 @@ export default ( {data}) => {
       <h2>Top</h2>
     </a>
 
+    {/* Render all sections of the manual from our CMS */}
+    {sections.map( sectionInfo => RenderSection(sectionInfo))}
 
     <Footer className="site-footer">
       <span>&copy; {footerInfo.copyright}</span>
@@ -99,5 +102,16 @@ export const query = graphql`
         }
       }
     }
+
+    allSectionsYaml {
+      totalCount
+      edges {
+        node {
+          title
+          content
+        }
+      }
+    }
+
   }
 `
