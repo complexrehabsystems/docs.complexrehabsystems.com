@@ -1,0 +1,153 @@
+@import "_vars.scss";
+
+$header-height-mobile: 245vh;
+$header-height-desktop: 30vh;
+
+header {
+    background: url("../assets/banner.svg");
+    background: url("../assets/banner.svg"), lighten($brand-dark, 40);
+    background-blend-mode: multiply;
+    background-size: cover;
+    max-height: $header-height-mobile;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    @media(min-width: $breakpoint-lg) {
+        padding: 40px 0 40px 40px;
+        flex-direction: row;
+    }
+
+    .logo-mission {
+        float: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.45rem;
+
+        .logo {
+            width: 70vw;
+        }
+
+        .mission {
+            color: $brand-light;
+            margin: 0;
+            padding: 1.45rem;
+            border-top: 1px solid $brand-light;
+            text-align: center;
+        }
+
+        @media(min-width: $breakpoint-lg) {
+            margin-right: 40px;
+            margin-top: 0;
+
+            .logo {
+                width: 30vw;
+            }
+
+            .mission {
+                width: 25vw;
+                border-top: 1px solid $brand-light;
+                text-align: center;
+            }
+        }
+    }
+
+    .what-is-crs {
+        color: $brand-light;
+        margin: 0;
+
+        h1 {
+            margin: 0 0 0 0;
+            font-weight: 900;
+            color: $brand-primary;
+            text-transform: uppercase;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 20px;
+            line-height: 0.9;
+        }
+
+        
+        @media(min-width: $breakpoint-sm) {
+            h1 {
+                font-size: 36px;
+            }
+        }
+
+        @media(min-width: $breakpoint-lg) {
+            h1 {
+                max-width: 40vw;
+                font-size: 40px;
+                text-align: left;
+            }
+        }
+
+        @media(min-width: $breakpoint-xl) {
+            h1 {
+                max-width: 50vw;
+                font-size: 50px;
+            }
+        }
+
+        @media(min-width: $breakpoint-xxl) {
+            h1 {
+                max-width: 40vw;
+                font-size: 60px;
+            }
+        }
+
+        @media(min-width: $breakpoint-xxxl) {
+            h1 {
+                max-width: 35vw;
+                font-size: 70px;
+            }
+        }
+
+        .text {
+            margin: 0;
+            font-size: 14px;
+            background-color: rgba(128, 128, 128, 0.4);
+            color: $brand-light;
+            padding: 30px 40px;
+
+            @media(min-width: $breakpoint-md) {
+                width: 100vw;
+            }
+            
+            @media(min-width: $breakpoint-lg) {
+                color: $brand-light;
+                padding: 30px 40px;
+                width: 50vw;
+
+                p {
+                    max-width: 50vw;
+                }
+            }
+
+            @media(min-width: $breakpoint-xl) {
+                width: 50vw;
+                font-size: 20px;
+                p {
+                    max-width: 35vw;
+                }
+            }
+
+            @media(min-width: $breakpoint-xxl) {
+                p {
+                    max-width: 25vw;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-lg) {
+        min-height: $header-height-desktop;
+    }
+
+    border-bottom: 10px solid $brand-primary;
+    margin: 0;
+}

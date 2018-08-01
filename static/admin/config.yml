@@ -1,0 +1,34 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: static/uploads
+public_folder: /uploads
+
+collections:
+  - label: "General Content"
+    name: "generalContent"
+    create: false
+    delete: false
+    files:
+      - label: "Header"
+        name: "siteHeader"
+        file: "_data/header/header.yml"
+        fields:
+          - {label: "Tagline", name: "tagline", widget: "string"}
+          - {label: "Popout Tagline", name: "popoutTagline", widget: "string"}
+          - {label: "Popout Text Block", name: "popoutTextBlock", widget: "markdown"}
+      - label: "Footer"
+        name: "siteFooter"
+        file: "_data/footer/footer.yml"
+        fields:
+          - {label: "copyright", name: "copyright", widget: "string"}
+          - {label: "address", name: "address", widget: "string"}
+  - label: "Sections"
+    name: "sections"
+    folder: "_data/sections"
+    format: "yaml"
+    create: true
+    fields:
+      - {label: "Section Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Section Content", name: "content", widget: "markdown"}

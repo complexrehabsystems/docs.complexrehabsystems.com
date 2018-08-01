@@ -1,0 +1,45 @@
+@import "_vars.scss";
+
+$footer-height: 100px;
+
+footer {
+  color: $brand-light;
+  background: $brand-dark;
+  background-size: cover;
+  height: min-content;
+  border-top: 8px solid $brand-highlight;
+  z-index: 2;
+
+  .footer-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    span {
+      padding: 15px 0;
+      text-align: center;
+      &:not(:last-child){
+        border-bottom: 3px solid $brand-light;
+      }
+    }
+  }
+
+  @media(min-width: $breakpoint-md) {
+    .footer-items {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 30px 0;
+
+      span{
+        padding: 0 15px;
+        &:not(:last-child){
+          border-right: 3px solid $brand-light;
+          border-bottom: none;
+        }
+      }
+
+    }
+  }
+
+}

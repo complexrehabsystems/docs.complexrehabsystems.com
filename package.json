@@ -1,0 +1,25 @@
+{
+  "name": "gatsby-starter-hello-world",
+  "description": "Gatsby hello world starter",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve"
+  },
+  "dependencies": {
+    "gatsby": "^1.9.271",
+    "gatsby-link": "^1.6.40",
+    "gatsby-plugin-netlify-cms": "^2.0.1",
+    "gatsby-plugin-sass": "^1.0.26",
+    "gatsby-plugin-typography": "^1.7.19",
+    "gatsby-source-filesystem": "^1.5.39",
+    "gatsby-transformer-yaml": "^1.5.18",
+    "gatsby-transformer-yaml-netlify": "^1.0.0-alpha.1",
+    "netlify-cms": "^1.9.2",
+    "react-icons": "^2.2.7",
+    "remark": "^9.0.0",
+    "remark-react": "^4.0.3",
+    "smooth-scroll": "^14.2.0"
+  }
+}
