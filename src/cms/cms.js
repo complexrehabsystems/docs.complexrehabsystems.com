@@ -1,0 +1,2 @@
+import "../styles/cms.scss"
+
