@@ -5,6 +5,62 @@ content: >-
   sections.
 
 
+  ## Step One: Create a new client
+
+
+  From the Home View you can locate an existing client, or choose to create a
+  new client.
+
+
+  ![](/uploads/01_a_homeview.JPG)
+
+
+
+
+  ## Step Two: Create an evaluation
+
+
+  When you view a new client, there will be no evaluations in the evaluation
+  screen. You must create one with the New Evaluation button.
+
+
+  ![](/uploads/03_a_client_details.JPG)
+
+
+
+
+  ## Step Three: Add notes to the Basic Info section of the evaluation
+
+
+  Each evaluation has several tabs worth of data (see tabs below header). On the
+  Basic Info tab, you can set an external work order ID, and enter some general
+  notes regarding the client.
+
+
+  ![](/uploads/04_a_eval_view_basic_info.JPG)
+
+
+
+
+  ## Step Four: Capture a Scan
+
+
+  On the scanning tab, you can choose to capture a new scan.
+
+
+  ![](/uploads/04_b_eval_view_scans.JPG)
+
+
+  When the scanner launches, you'll see a preview of the streaming 3D data.  Use
+  the controls at the right to position the bounding box around the target. 
+  Press start to begin a scan.
+
+
+  ![](/uploads/10_a_scanner_preview.JPG)This is a set of instructions covering
+  the entire CRS workflow. More detailed instructions with illustrations are
+  provided later in the Detailed Usage sections.
+
+
 
 
 
