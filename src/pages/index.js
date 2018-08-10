@@ -1,4 +1,5 @@
 import React from "react"
+import ReactDOM from 'react-dom'
 import Header from "../components/header"
 import Footer from "../components/footer"
 
@@ -6,7 +7,7 @@ import UpArrowIcon from "react-icons/lib/fa/arrow-circle-o-up"
 
 import "../styles/layout.scss"
 
-import logo from "../assets/banner_logo.svg"
+import logo from "../assets/crs_3d.png"
 
 var remark = require('remark'),
     reactRenderer = require('remark-react');
@@ -47,18 +48,12 @@ export default ( {data}) => {
   }
 
   return <div className="layout">
-
     <Header className="site-header">
-        <div className="logo-mission">
-            <img src={logo} className="logo" />
-            <h3 className="mission">{headerInfo.tagline} </h3>
-        </div>
-
-        <div className="what-is-crs">
-            <h1>{headerInfo.popoutTagline}</h1>
-            <div className="text">
-                <p>{headerInfo.popoutTextBlock}</p>
-            </div>
+        <img src={logo} className="logo" />
+        <div className="user-manual-info">
+            <h1>{headerInfo.title}</h1>
+            <h3>{headerInfo.subtitle}</h3>
+            <h3>{headerInfo.publicationDate}</h3>
         </div>
 
     </Header>
@@ -89,6 +84,9 @@ export const query = graphql`
           tagline
           popoutTagline
           popoutTextBlock
+          title
+          subtitle
+          publicationDate
         }
       }
     }

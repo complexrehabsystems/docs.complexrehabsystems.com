@@ -4,20 +4,78 @@ $header-height-mobile: 245vh;
 $header-height-desktop: 30vh;
 
 header {
-    background: url("../assets/banner.svg");
-    background: url("../assets/banner.svg"), lighten($brand-dark, 40);
-    background-blend-mode: multiply;
+    background-color: white;
     background-size: cover;
     max-height: $header-height-mobile;
-    min-height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+
+    .logo {
+        display: block;
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .user-manual-info {
+        background-color: $brand-primary;
+        color: white;
+        text-align: center;
+
+        h1 {
+            margin: 15px 0 25px 0;
+            font-size: 30px;
+        }
+
+        h3 {
+            margin: 10px 0 0 0;
+            font-size: 25px;
+        }
+    }
+
+    .logo {
+        display: block;
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
 
     @media(min-width: $breakpoint-lg) {
-        padding: 40px 0 40px 40px;
-        flex-direction: row;
+        .logo {
+            width: 40%;
+        }
+
+        .user-manual-info {
+            text-align: left;
+
+            h1 {
+                margin: 15px 0 25px 30px;
+                font-size: 60px;
+            }
+
+            h3 {
+                margin: 10px 0 0 30px;
+                font-size: 35px;
+            }
+        }
+    }
+
+    @media(min-width: $breakpoint-xl) {
+        .logo {
+            width: 30%;
+        }
+
+        .user-manual-info {
+            h1 {
+                margin: 15px 0 25px 30px;
+                font-size: 80px;
+            }
+
+            h3 {
+                margin: 10px 0 0 30px;
+                font-size: 50px;
+            }
+        }
     }
 
     .logo-mission {
@@ -71,7 +129,7 @@ header {
             line-height: 0.9;
         }
 
-        
+
         @media(min-width: $breakpoint-sm) {
             h1 {
                 font-size: 36px;
@@ -117,7 +175,7 @@ header {
             @media(min-width: $breakpoint-md) {
                 width: 100vw;
             }
-            
+
             @media(min-width: $breakpoint-lg) {
                 color: $brand-light;
                 padding: 30px 40px;
@@ -131,6 +189,7 @@ header {
             @media(min-width: $breakpoint-xl) {
                 width: 50vw;
                 font-size: 20px;
+
                 p {
                     max-width: 35vw;
                 }

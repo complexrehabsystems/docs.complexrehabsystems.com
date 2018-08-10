@@ -18,6 +18,9 @@ collections:
           - {label: "Tagline", name: "tagline", widget: "string"}
           - {label: "Popout Tagline", name: "popoutTagline", widget: "string"}
           - {label: "Popout Text Block", name: "popoutTextBlock", widget: "markdown"}
+          - {label: "Title", name: "title", string: ""}
+          - {label: "Subtitle", name: "subtitle", string: ""}
+          - {label: "Publication Date", name: "publicationDate", string: ""}
       - label: "Footer"
         name: "siteFooter"
         file: "_data/footer/footer.yml"
