@@ -81,9 +81,6 @@ export const query = graphql`
       totalCount
       edges {
         node {
-          tagline
-          popoutTagline
-          popoutTextBlock
           title
           subtitle
           publicationDate
