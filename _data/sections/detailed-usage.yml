@@ -11,7 +11,7 @@ content: >-
 
   4. Review Client details and confirm creation or select to use an existing
   client.  The application will look for possible duplicates and notify of those
-  it finds.  
+  it finds.\
      **Warning: Client details are final once created. **
   5. After confirmation you are taken directly to view the new client.
 
@@ -64,9 +64,5 @@ content: >-
   1. Navigate to a client evaluation and click the scanning tab.
 
   2. Launch the scanning application by clicking New Scan.
-     **Note:**\
-     - The RealSense sensor must be connected.\
-     - The optimal settings are not the default.  You should select:\
-          - Scanning area: Full\
-          - Solid should be checked\
-          - Texture should be checked
+     **Note: The RealSense sensor must be connected at this time.**
+  3.
