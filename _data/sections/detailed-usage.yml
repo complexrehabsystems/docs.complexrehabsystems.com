@@ -1,0 +1,72 @@
+title: Detailed Usage
+content: >-
+  ## Creating a New Client
+
+
+  1. Go to the Home screen by clicking the house in the upper right menu panel.
+
+  2. Click the large blue "create New Client +" button.
+
+  3. Fill in client details.  
+
+  4. Review Client details and confirm creation or select to use an existing
+  client.  The application will look for possible duplicates and notify of those
+  it finds.  
+     **Warning: Client details are final once created. **
+  5. After confirmation you are taken directly to view the new client.
+
+
+  ## Creating a New Evaluation
+
+
+  1. Navigate to a client view by selecting your chosen client form the list of
+  clients.
+
+  2. Click the blue "New Evaluation" button.  This creates a blank evaluation
+  record.
+
+
+  Each evaluation has the following tabs:
+
+
+  * Basic info
+    * Optional Work Order ID
+    * Optional notes
+  * Scanning - launches the scanner and allows a new scan to be taken or
+  importing of completed scans previously taken and not saved to the evaluation
+
+  * Measurements - view the existing scans, add new measurements to the
+  evaluation
+
+  * Attachments - capture images and video, attach files
+
+  * Scratch pad - allows user to annotate images
+
+
+  ## Capturing and Importing Scans
+
+
+  When viewing a client evaluation, you can add multiple scans to the record. 
+  These can be used for:
+
+
+  * Capturing linear measurements electronically (e.g. seat depth)
+
+  * Sending models to molding frame companies
+
+  * Determining optimal tray cutout patterns
+
+
+  To capture a scan and attach it to the evaluation, the following steps are
+  required:
+
+
+  1. Navigate to a client evaluation and click the scanning tab.
+
+  2. Launch the scanning application by clicking New Scan.
+     **Note:**\
+     - The RealSense sensor must be connected.\
+     - The optimal settings are not the default.  You should select:\
+          - Scanning area: Full\
+          - Solid should be checked\
+          - Texture should be checked
