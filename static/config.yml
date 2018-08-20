@@ -32,3 +32,4 @@ collections:
     fields:
       - {label: "Section Title", name: "title", widget: "string", tagname: "h1"}
       - {label: "Section Content", name: "content", widget: "markdown"}
+      - {label: "Section Published", name: "published", widget: "boolean", default: false}

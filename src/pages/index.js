@@ -2,10 +2,12 @@ import React from "react"
 import ReactDOM from 'react-dom'
 import Header from "../components/header"
 import Footer from "../components/footer"
+import Sections from "../components/sections"
 
 import UpArrowIcon from "react-icons/lib/fa/arrow-circle-o-up"
 
 import "../styles/layout.scss"
+import "../styles/sections.scss"
 
 import logo from "../assets/crs_3d.png"
 
@@ -37,16 +39,17 @@ export default ( {data}) => {
   const headerInfo = data.allHeaderYaml.edges[0].node;
   const footerInfo = data.allFooterYaml.edges[0].node;
   const sections = data.allSectionsYaml.edges.map(e => e.node);
+  const contentInfo = sections.filter(s => s.title == "Images Flat List");
 
   const RenderSection = (sectionInfo) => {
     return <div className="manual-section">
-      <h1>{sectionInfo.title}</h1>
+      <h1 className="title">{sectionInfo.title}</h1>
       <div className="section-content">
         {remark().use(reactRenderer).processSync(sectionInfo.content).contents}
       </div>
     </div>
-  }
-
+    }
+    
   return <div className="layout">
     <Header className="site-header">
         <img src={logo} className="logo" />
@@ -61,10 +64,12 @@ export default ( {data}) => {
     <a id="top-link" href="#">
       <UpArrowIcon/>
       <h2>Top</h2>
-    </a>
+      </a>
 
     {/* Render all sections of the manual from our CMS */}
-    {sections.map( sectionInfo => RenderSection(sectionInfo))}
+    <div className="section">
+        {sections.map( sectionInfo => RenderSection(sectionInfo))}
+    </div>
 
     <Footer className="site-footer">
       <span>&copy; {footerInfo.copyright}</span>
