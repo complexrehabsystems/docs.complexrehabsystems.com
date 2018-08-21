@@ -140,3 +140,5 @@ content: >-
   This button is visible in all tabs of the evaluation.  Choose the destination
   to save it to, enter the file name you would like to save it as and click
   save.
+published: true
+displayOrder: 2

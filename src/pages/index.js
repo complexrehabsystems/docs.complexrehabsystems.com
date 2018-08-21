@@ -39,7 +39,6 @@ export default ( {data}) => {
   const headerInfo = data.allHeaderYaml.edges[0].node;
   const footerInfo = data.allFooterYaml.edges[0].node;
   const sections = data.allSectionsYaml.edges.map(e => e.node);
-  const contentInfo = sections.filter(s => s.title == "Images Flat List");
 
   const RenderSection = (sectionInfo) => {
     return <div className="manual-section">
@@ -66,9 +65,9 @@ export default ( {data}) => {
       <h2>Top</h2>
       </a>
 
-    {/* Render all sections of the manual from our CMS */}
-    <div className="section">
-        {sections.map( sectionInfo => RenderSection(sectionInfo))}
+      {/* Render all sections of the manual from our CMS */}
+      <div className="section">
+          {sections.filter(sectionInfo => sectionInfo.published).sort(sectionInfo => sectionInfo.displayOrder).map(sectionInfo => RenderSection(sectionInfo))}
     </div>
 
     <Footer className="site-footer">
@@ -109,6 +108,8 @@ export const query = graphql`
         node {
           title
           content
+          published
+          displayOrder
         }
       }
     }
