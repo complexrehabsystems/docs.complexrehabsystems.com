@@ -24,3 +24,5 @@ content: >-
   * Client details
 
   * Evaluations
+published: true
+displayOrder: 5

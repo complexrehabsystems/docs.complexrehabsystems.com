@@ -4,10 +4,9 @@ $footer-height: 100px;
 
 footer {
   color: $brand-light;
-  background: $brand-dark;
+  background: $brand-primary;
   background-size: cover;
   height: min-content;
-  border-top: 8px solid $brand-highlight;
   z-index: 2;
 
   .footer-items {
@@ -16,6 +15,7 @@ footer {
     justify-content: center;
     align-items: center;
     span {
+      font-size: small; 
       padding: 15px 0;
       text-align: center;
       &:not(:last-child){
@@ -24,7 +24,7 @@ footer {
     }
   }
 
-  @media(min-width: $breakpoint-md) {
+  @media(min-width: $breakpoint-lg) {
     .footer-items {
       flex-direction: row;
       justify-content: center;
@@ -32,6 +32,7 @@ footer {
       margin: 30px 0;
 
       span{
+        font-size: medium;
         padding: 0 15px;
         &:not(:last-child){
           border-right: 3px solid $brand-light;
