@@ -45,6 +45,8 @@ content: >-
   * Scratch pad - allows user to annotate images
 
 
+
+
   ## Capturing and Importing Scans
 
 
@@ -99,6 +101,8 @@ content: >-
   the scan.
 
 
+
+
   ## Orient a Scan Using the Set Views Controls
 
 
@@ -123,6 +127,8 @@ content: >-
   clicking done.
 
   6. You should save the Evaluation now to ensure your configuration is saved.
+
+
 
 
   ## Taking Measurements
@@ -193,6 +199,8 @@ content: >-
   become transparent to ensure users can still edit the measurements.
 
 
+
+
   ## Capturing Images & Video/Attaching Files
 
 
@@ -207,6 +215,8 @@ content: >-
 
   Images and videos have a preview screen; attaching other file types (ie PDF)
   will open in your default Windows viewer.
+
+
 
 
   ## Generate PDF Reports
