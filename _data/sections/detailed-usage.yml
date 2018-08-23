@@ -16,6 +16,8 @@ content: >-
   5. After confirmation you are taken directly to view the new client.
 
 
+
+
   ## Creating a New Evaluation
 
 
@@ -41,6 +43,8 @@ content: >-
   * Attachments - capture images and video, attach files
 
   * Scratch pad - allows user to annotate images
+
+
 
 
   ## Capturing and Importing Scans
@@ -77,18 +81,16 @@ content: >-
      Limit the use of other graphic intense programs during the scan\
      Ensure the sensor is aimed at the client and not blank space
 
-  ![](/uploads/do_3.png)
+  ![null](/uploads/do_3.png)
 
 
-  ![](/uploads/dont_3.png)
+  ![null](/uploads/dont_3.png)
 
 
-  ![](/uploads/do_2.png)
+  ![null](/uploads/do_2.png)
 
 
-
-
-  ![](/uploads/dont_2.png)
+  ![null](/uploads/dont_2.png)
 
 
   1. When satisfied with the model, press Complete Scan and save the file to
@@ -97,6 +99,8 @@ content: >-
   2. Close the scanning screen and return to to the scanning tab.  Click Import
   Scan.  Navigate to the scan you just saved using the file dialog and import
   the scan.
+
+
 
 
   ## Orient a Scan Using the Set Views Controls
@@ -123,6 +127,8 @@ content: >-
   clicking done.
 
   6. You should save the Evaluation now to ensure your configuration is saved.
+
+
 
 
   ## Taking Measurements
@@ -176,25 +182,23 @@ content: >-
   Note:
 
 
-  Measurements that have been entered manually can be edited using the text
+  * Measurements that have been entered manually can be edited using the text
   entry.
 
-
-  Measurements that have been taken from the scan may not be edited directly
+  * Measurements that have been taken from the scan may not be edited directly
   using the text field, but must be edited using control points in the scan
   viewer.
 
+  * Measurements can be removed by clicking the small (-) symbol at the right
+  side of the measurement.
 
-  Measurements can be removed by clicking the small (-) symbol at the right side
-  of the measurement.
-
-
-  Individual measurements can be viewed one at a time by clicking through the
+  * Individual measurements can be viewed one at a time by clicking through the
   blue eyeball icons in the list of measurements.
 
-
-  If the measurement control points fall inside the model, the viewer will
+  * If the measurement control points fall inside the model, the viewer will
   become transparent to ensure users can still edit the measurements.
+
+
 
 
   ## Capturing Images & Video/Attaching Files
@@ -211,6 +215,8 @@ content: >-
 
   Images and videos have a preview screen; attaching other file types (ie PDF)
   will open in your default Windows viewer.
+
+
 
 
   ## Generate PDF Reports
