@@ -50,49 +50,46 @@ export default ( {data}) => {
     </div>
     }
     
-    const RenderTable = (sectionInfo, index) => {
-        const href = "#" + index;
+    const RenderTableOfContents = (sectionInfo, index) => {
+      const link = "#" + index;
       return <div className="table-contents">
-          <a href={href}>{sectionInfo.title}</a>
+          <a href={link}>{sectionInfo.title}</a>
     </div>
     }
-
     
+    return <div className="layout">
+        <Header className="site-header">
+            <img src={logo} className="logo" />
+            <div className="user-manual-info">
+                <h1>{headerInfo.title}</h1>
+                <h3>{headerInfo.subtitle}</h3>
+                <h3>{headerInfo.publicationDate}</h3>
+            </div>
 
-    
-  return <div className="layout">
-    <Header className="site-header">
-        <img src={logo} className="logo" />
-        <div className="user-manual-info">
-            <h1>{headerInfo.title}</h1>
-            <h3>{headerInfo.subtitle}</h3>
-            <h3>{headerInfo.publicationDate}</h3>
-        </div>
+        </Header>
 
-    </Header>
+        <a id="top-link" href="#">
+          <UpArrowIcon/>
+          <h2>Top</h2>
+          </a>
 
-    <a id="top-link" href="#">
-      <UpArrowIcon/>
-      <h2>Top</h2>
-      </a>
+          {/* Render table of contents */}
+          <div className="table-of-contents">
+              <h1 className="table-heading">Table of Contents</h1>
+              {sections.filter(sectionInfo => sectionInfo.published).sort(sectionInfo => sectionInfo.displayOrder).map((sectionInfo, index) => RenderTableOfContents(sectionInfo, index))}
+          </div>
 
-      {/* Render table of contents */}
-      <div className="table">
-          <h1 className="table-heading">Table of Contents</h1>
-          {sections.filter(sectionInfo => sectionInfo.published).sort(sectionInfo => sectionInfo.displayOrder).map((sectionInfo, index) => RenderTable(sectionInfo, index))}
-      </div>
+          {/* Render all sections of the manual from our CMS */}
+          <div className="section">
+              {sections.filter(sectionInfo => sectionInfo.published).sort(sectionInfo => sectionInfo.displayOrder).map((sectionInfo, index) => RenderSection(sectionInfo, index))}
+          </div>
 
-      {/* Render all sections of the manual from our CMS */}
-      <div className="section">
-          {sections.filter(sectionInfo => sectionInfo.published).sort(sectionInfo => sectionInfo.displayOrder).map((sectionInfo, index) => RenderSection(sectionInfo, index))}
-      </div>
+        <Footer className="site-footer">
+          <span>&copy; {footerInfo.copyright}</span>
+          <span>{footerInfo.address}</span>
+        </Footer>
 
-    <Footer className="site-footer">
-      <span>&copy; {footerInfo.copyright}</span>
-      <span>{footerInfo.address}</span>
-    </Footer>
-
-  </div>
+    </div>
 }
 
 export const query = graphql`
