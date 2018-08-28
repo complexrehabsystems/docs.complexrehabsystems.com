@@ -8,6 +8,7 @@ import UpArrowIcon from "react-icons/lib/fa/arrow-circle-o-up"
 
 import "../styles/layout.scss"
 import "../styles/sections.scss"
+import "../styles/table.scss"
 
 import logo from "../assets/crs_3d.png"
 
@@ -40,14 +41,24 @@ export default ( {data}) => {
   const footerInfo = data.allFooterYaml.edges[0].node;
   const sections = data.allSectionsYaml.edges.map(e => e.node);
 
-  const RenderSection = (sectionInfo) => {
-    return <div className="manual-section">
+    const RenderSection = (sectionInfo, index) => {
+      return <div className="manual-section" id={index}>
       <h1 className="title">{sectionInfo.title}</h1>
       <div className="section-content">
         {remark().use(reactRenderer).processSync(sectionInfo.content).contents}
       </div>
     </div>
     }
+    
+    const RenderTable = (sectionInfo, index) => {
+        const href = "#" + index;
+      return <div className="table-contents">
+          <a href={href}>{sectionInfo.title}</a>
+    </div>
+    }
+
+    
+
     
   return <div className="layout">
     <Header className="site-header">
@@ -65,10 +76,16 @@ export default ( {data}) => {
       <h2>Top</h2>
       </a>
 
+      {/* Render table of contents */}
+      <div className="table">
+          <h1 className="table-heading">Table of Contents</h1>
+          {sections.filter(sectionInfo => sectionInfo.published).sort(sectionInfo => sectionInfo.displayOrder).map((sectionInfo, index) => RenderTable(sectionInfo, index))}
+      </div>
+
       {/* Render all sections of the manual from our CMS */}
       <div className="section">
-          {sections.filter(sectionInfo => sectionInfo.published).sort(sectionInfo => sectionInfo.displayOrder).map(sectionInfo => RenderSection(sectionInfo))}
-    </div>
+          {sections.filter(sectionInfo => sectionInfo.published).sort(sectionInfo => sectionInfo.displayOrder).map((sectionInfo, index) => RenderSection(sectionInfo, index))}
+      </div>
 
     <Footer className="site-footer">
       <span>&copy; {footerInfo.copyright}</span>
