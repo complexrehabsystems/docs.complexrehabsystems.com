@@ -8,6 +8,7 @@ import UpArrowIcon from "react-icons/lib/fa/arrow-circle-o-up"
 
 import "../styles/layout.scss"
 import "../styles/sections.scss"
+import "../styles/table.scss"
 
 import logo from "../assets/crs_3d.png"
 
@@ -40,8 +41,8 @@ export default ( {data}) => {
   const footerInfo = data.allFooterYaml.edges[0].node;
   const sections = data.allSectionsYaml.edges.map(e => e.node);
 
-  const RenderSection = (sectionInfo) => {
-    return <div className="manual-section">
+    const RenderSection = (sectionInfo, index) => {
+      return <div className="manual-section" id={index}>
       <h1 className="title">{sectionInfo.title}</h1>
       <div className="section-content">
         {remark().use(reactRenderer).processSync(sectionInfo.content).contents}
@@ -49,33 +50,46 @@ export default ( {data}) => {
     </div>
     }
     
-  return <div className="layout">
-    <Header className="site-header">
-        <img src={logo} className="logo" />
-        <div className="user-manual-info">
-            <h1>{headerInfo.title}</h1>
-            <h3>{headerInfo.subtitle}</h3>
-            <h3>{headerInfo.publicationDate}</h3>
-        </div>
-
-    </Header>
-
-    <a id="top-link" href="#">
-      <UpArrowIcon/>
-      <h2>Top</h2>
-      </a>
-
-      {/* Render all sections of the manual from our CMS */}
-      <div className="section">
-          {sections.filter(sectionInfo => sectionInfo.published).sort(sectionInfo => sectionInfo.displayOrder).map(sectionInfo => RenderSection(sectionInfo))}
+    const RenderTableOfContents = (sectionInfo, index) => {
+      const link = "#" + index;
+      return <div className="table-contents">
+          <a href={link}>{sectionInfo.title}</a>
     </div>
+    }
+    
+    return <div className="layout">
+        <Header className="site-header">
+            <img src={logo} className="logo" />
+            <div className="user-manual-info">
+                <h1>{headerInfo.title}</h1>
+                <h3>{headerInfo.subtitle}</h3>
+                <h3>{headerInfo.publicationDate}</h3>
+            </div>
 
-    <Footer className="site-footer">
-      <span>&copy; {footerInfo.copyright}</span>
-      <span>{footerInfo.address}</span>
-    </Footer>
+        </Header>
 
-  </div>
+        <a id="top-link" href="#">
+          <UpArrowIcon/>
+          <h2>Top</h2>
+          </a>
+
+          {/* Render table of contents */}
+          <div className="table-of-contents">
+              <h1 className="table-heading">Table of Contents</h1>
+              {sections.filter(sectionInfo => sectionInfo.published).sort(sectionInfo => sectionInfo.displayOrder).map((sectionInfo, index) => RenderTableOfContents(sectionInfo, index))}
+          </div>
+
+          {/* Render all sections of the manual from our CMS */}
+          <div className="section">
+              {sections.filter(sectionInfo => sectionInfo.published).sort(sectionInfo => sectionInfo.displayOrder).map((sectionInfo, index) => RenderSection(sectionInfo, index))}
+          </div>
+
+        <Footer className="site-footer">
+          <span>&copy; {footerInfo.copyright}</span>
+          <span>{footerInfo.address}</span>
+        </Footer>
+
+    </div>
 }
 
 export const query = graphql`
