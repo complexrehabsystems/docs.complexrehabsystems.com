@@ -4,19 +4,39 @@ $header-height-mobile: 245vh;
 $header-height-desktop: 30vh;
 
 .section {
-    background-color: $brand-highlight;
+    background-color: white;
 
     .manual-section {
         .title {
-            font-size: 25px;
-            color: white;
-            text-align: center;
-            padding: 10px 0 0 0;
+            font-size: 35px;
+            color: $brand-highlight;
+            text-align: left;
+            margin: 50px 50px 25px 50px;
         }
 
         .section-content {
             font-size: 15px;
-            margin: 20px;
+            margin: 0 50px 50px 50px;
+
+            h2 {
+                margin: 35px 0 0 0;
+            }
+
+            p {
+                margin: 35px 0 0 0;
+            }
+
+            ol {
+                padding: 15px 10px 0 10px;
+            }
+
+            ul {
+                padding: 15px 10px 0 10px;
+            }
+
+            li {
+                margin: 0 0 20px 0;
+            }
         }
     }
 }
@@ -26,13 +46,38 @@ $header-height-desktop: 30vh;
 
         .manual-section {
             .title {
-                font-size: 30px;
-                text-align: center;
-                padding: 10px 0 0 0;
+                font-size: 40px;
+                margin: 60px 100px 30px 100px;
             }
 
             .section-content {
-                margin: 70px;
+                margin: 0 100px 60px 100px;
+
+                h2 {
+                    margin: 45px 0 0 0;
+                }
+
+                p {
+                    margin: 45px 0 0 0;
+
+                    img {
+                        margin-bottom: -40px;
+                        background-color: lightgray;
+                    }
+                }
+
+                ol {
+                    padding: 20px 10px 0 10px;
+                }
+
+                ul {
+                    padding: 20px 10px 0 10px;
+                }
+
+                li {
+                    margin: 0 0 30px 0;
+                }
+
             }
         }
     }
@@ -42,23 +87,33 @@ $header-height-desktop: 30vh;
     .section {
 
         .manual-section {
+
             .title {
                 font-size: 50px;
-                text-align: center;
-                padding: 25px 0 0 0;
+                margin: 70px 125px 30px 125px;
             }
 
             .section-content {
-                margin: auto;
-                width: 50%;
-                padding: 0 0 25px 0;
+                margin: 0 125px 70px 125px;
+
+                h2 {
+                    margin: 55px 0 0 0;
+                }
 
                 p {
-                    margin: auto;
+                    margin: 55px 0 0 0;
+                }
 
-                    img {
-                        margin: 25px 0 25px 0;
-                    }
+                ol {
+                    padding: 30px 10px 0 10px;
+                }
+
+                ul {
+                    padding: 30px 10px 0 10px;
+                }
+
+                li {
+                    margin: 0 0 40px 0;
                 }
             }
         }
@@ -69,13 +124,37 @@ $header-height-desktop: 30vh;
     .section {
 
         .manual-section {
+            margin: auto;
+            width: 60%;
+
             .title {
-                font-size: 50px;
-                text-align: center;
+                font-size: 55px;
+                margin: 80px 0 30px 0;
             }
 
             .section-content {
                 font-size: 20px;
+                margin: 0 0 80px 0;
+
+                h2 {
+                    margin: 65px 0 0 0;
+                }
+
+                p {
+                    margin: 65px 0 0 0;
+                }
+
+                ol {
+                    padding: 40px 10px 0 10px;
+                }
+
+                ul {
+                    padding: 40px 10px 0 10px;
+                }
+
+                li {
+                    margin: 0 0 50px 0;
+                }
             }
         }
     }
