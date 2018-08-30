@@ -27,11 +27,36 @@ const debounce = (fn, time) => {
   }
 }
 
+const formatString = (str) => {
+    return str.toLowerCase().split(" ").join('-');
+}
+
 if (typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]');
   window.addEventListener('scroll', debounce(function() {
     document.getElementById('top-link').style.opacity = (pageYOffset-800);
-  }, 100));
+    }, 100));
+
+    function load() {
+        console.log('a');
+        var sectionHeadings = document.querySelectorAll(".section h1, .section h2");
+        console.log(sectionHeadings);
+        var toc = {}
+        sectionHeadings.forEach((heading) => {
+            heading.id = (heading.textContent);
+            console.log(heading);
+            if (heading.nodeName == "H1") {
+                //toc[heading.textContent] = {}
+                //lastSection = heading.textContent;
+                console.log(heading.textContent);
+            }
+        })
+
+        window.onload = load;
+
+    }
+    
+
 }
 
 // MAIN COMPONENT
@@ -51,7 +76,7 @@ export default ( {data}) => {
     }
     
     const RenderTableOfContents = (sectionInfo, index) => {
-      const link = "#" + index;
+      const link = "#" + (sectionInfo.title);
       return <div className="table-contents">
           <a href={link}>{sectionInfo.title}</a>
     </div>
