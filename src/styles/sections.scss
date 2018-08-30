@@ -11,7 +11,7 @@ $header-height-desktop: 30vh;
             font-size: 35px;
             color: $brand-highlight;
             text-align: left;
-            margin: 50px 50px 15px 50px;
+            margin: 0 50px 15px 50px;
         }
 
         .section-content {
@@ -32,11 +32,11 @@ $header-height-desktop: 30vh;
             }
 
             ol {
-                padding: 0 10px 0 10px;
+                margin: 0 10px 0 10px;
             }
 
             ul {
-                padding: 0 10px 0 10px;
+                margin: 0 10px 0 10px;
             }
 
             li {
@@ -52,7 +52,7 @@ $header-height-desktop: 30vh;
         .manual-section {
             .title {
                 font-size: 40px;
-                margin: 60px 100px 20px 100px;
+                margin: 0 100px 20px 100px;
             }
 
             .section-content {
@@ -65,14 +65,6 @@ $header-height-desktop: 30vh;
 
                 p {
                     margin: 0 0 5px 0;
-                }
-
-                ol {
-                    padding: 0 10px 0 10px;
-                }
-
-                ul {
-                    padding: 0 10px 0 10px;
                 }
 
                 li {
@@ -90,7 +82,7 @@ $header-height-desktop: 30vh;
 
             .title {
                 font-size: 50px;
-                margin: 70px 200px 25px 200px;
+                margin: 0 200px 25px 200px;
             }
 
             .section-content {
@@ -103,14 +95,6 @@ $header-height-desktop: 30vh;
 
                 p {
                     margin: 0 0 5px 0;
-                }
-
-                ol {
-                    padding: 0 10px 0 10px;
-                }
-
-                ul {
-                    padding: 0 10px 0 10px;
                 }
 
                 li {
@@ -130,7 +114,7 @@ $header-height-desktop: 30vh;
 
             .title {
                 font-size: 55px;
-                margin: 80px 0 25px 0;
+                margin: 0 0 25px 0;
             }
 
             .section-content {
@@ -144,14 +128,6 @@ $header-height-desktop: 30vh;
 
                 p {
                     margin: 0 0 5px 0;
-                }
-
-                ol {
-                    padding: 0 10px 0 10px;
-                }
-
-                ul {
-                    padding: 0 10px 0 10px;
                 }
 
                 li {
