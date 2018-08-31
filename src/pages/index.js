@@ -36,16 +36,29 @@ function hash(s){
   return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);              
 }
 
+function removeOverlay() {
+  let overlay = document.querySelector(".lockout-overlay");
+  overlay.classList.add("hidden");
+  let layout = document.querySelector(".layout");
+  layout.classList.remove("blurred");
+  window.scrollTo(0,0);
+}
+
+function showOverlay() {
+  let overlay = document.querySelector(".lockout-overlay");
+  overlay.classList.remove("hidden");
+  let layout = document.querySelector(".layout");
+  layout.classList.add("blurred");
+  window.scrollTo(0,0);
+}
+
 function unlock(e) {
     e.preventDefault();
     var password = document.getElementById("password").value;
 
     if(hash(password) === 1032675042) {
-        let overlay = document.querySelector(".lockout-overlay");
-        overlay.classList.add("hidden");
-        let layout = document.querySelector(".layout");
-        layout.classList.remove("blurred");
-        window.scrollTo(0,0);
+        removeOverlay();
+        document.cookie = "authorized=true";
     }
     else {
         let errorMsg = document.getElementById("unlock-failed");
@@ -64,12 +77,6 @@ if (typeof window !== 'undefined') {
 
     function reRenderTableOFContents(toc2) {
         var tocDiv = document.querySelector(".table-of-contents");
-        //tocDiv.innerHTML =
-        //    <ul>
-        //        do this object.length() number of times
-        //        <li>get each property which is H1</li>
-        //        <ul>all H2 elements of H1</ul>
-        //    </ul>;
 
         var tocItems = [];
         const markup = toc2.map(item => {
@@ -102,12 +109,15 @@ if (typeof window !== 'undefined') {
         });
 
         let unlockFailed = document.querySelector("#unlock-failed");
-        console.log(unlockFailed);
         unlockFailed.addEventListener("animationend", function(e) {
-          console.log(e);
           this.classList.remove("shake");
         });
-          
+
+        console.log(document.cookie);
+        if(document.cookie)
+          removeOverlay();
+        else 
+          showOverlay();
 
         reRenderTableOFContents(toc2);
     }
@@ -138,7 +148,7 @@ export default ( {data}) => {
     }
     
     return <div className="container">
-        <div className="layout blurred">
+        <div className="layout">
         <Header className="site-header">
             <img src={logo} className="logo" />
             <div className="user-manual-info">
@@ -172,7 +182,7 @@ export default ( {data}) => {
 
         </div>
 
-        <div className="lockout-overlay">
+        <div className="lockout-overlay hidden">
           <div className="lockout-bg"></div>
           <form onSubmit={unlock}>
             <img src={logo} className="logo" />
