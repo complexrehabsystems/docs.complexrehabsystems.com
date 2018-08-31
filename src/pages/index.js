@@ -45,6 +45,7 @@ function unlock(e) {
         overlay.classList.add("hidden");
         let layout = document.querySelector(".layout");
         layout.classList.remove("blurred");
+        window.scrollTo(0,0);
     }
     else {
         let errorMsg = document.getElementById("unlock-failed");
