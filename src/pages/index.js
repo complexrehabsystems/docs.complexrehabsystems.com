@@ -49,7 +49,7 @@ if (typeof window !== 'undefined') {
 
         var tocItems = [];
         const markup = toc2.map(item => {
-            const c = "toc-item " + item.type;
+            const c = "toc-item-" + item.type;
             const link = formatString(item.value);
             return `<div class="${c}"><a href="#${link}">${item.value}</a></div>`;
         }).join("");
