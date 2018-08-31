@@ -136,12 +136,12 @@ export default ( {data}) => {
           {/* Render table of contents */}
           <div className="table-of-contents">
             <h1 className="table-heading">Table of Contents</h1>
-            {sections.filter(sectionInfo => sectionInfo.published).sort(sectionInfo => sectionInfo.displayOrder).map((sectionInfo, index) => RenderTableOfContents(sectionInfo, index))}
+            {sections.filter(sectionInfo => sectionInfo.published).sort((sectionInfo1, sectionInfo2) => sectionInfo1.displayOrder > sectionInfo2.displayOrder).map((sectionInfo, index) => RenderTableOfContents(sectionInfo, index))}
           </div>
 
           {/* Render all sections of the manual from our CMS */}
           <div className="section">
-            {sections.filter(sectionInfo => sectionInfo.published).sort(sectionInfo => sectionInfo.displayOrder).map((sectionInfo, index) => RenderSection(sectionInfo, index))}
+            {sections.filter(sectionInfo => sectionInfo.published).sort((sectionInfo1, sectionInfo2) => sectionInfo1.displayOrder > sectionInfo2.displayOrder).map((sectionInfo, index) => RenderSection(sectionInfo, index))}
           </div>
 
         <Footer className="site-footer">
