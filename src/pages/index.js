@@ -41,6 +41,7 @@ function hideOverlay() {
   overlay.classList.add("hidden");
   let layout = document.querySelector(".layout");
   layout.classList.remove("blurred");
+  layout.classList.remove("hidden");
   window.scrollTo(0,0);
 }
 
@@ -49,6 +50,7 @@ function showOverlay() {
   overlay.classList.remove("hidden");
   let layout = document.querySelector(".layout");
   layout.classList.add("blurred");
+  layout.classList.remove("hidden");
   window.scrollTo(0,0);
 }
 
@@ -147,7 +149,7 @@ export default ( {data}) => {
     }
     
     return <div className="container">
-        <div className="layout">
+        <div className="layout hidden">
         <Header className="site-header">
             <img src={logo} className="logo" />
             <div className="user-manual-info">
