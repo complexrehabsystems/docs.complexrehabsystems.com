@@ -32,6 +32,28 @@ const formatString = (str) => {
     return str.toLowerCase().split(" ").join('-');
 }
 
+function hash(s){
+  return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);              
+}
+
+function unlock(e) {
+    e.preventDefault();
+    var password = document.getElementById("password").value;
+
+    if(hash(password) === 1032675042) {
+        let overlay = document.querySelector(".lockout-overlay");
+        overlay.classList.add("hidden");
+        let layout = document.querySelector(".layout");
+        layout.classList.remove("blurred");
+    }
+    else {
+        let errorMsg = document.getElementById("unlock-failed");
+        errorMsg.classList.remove("hidden");
+    }
+
+    return false;
+}
+
 if (typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]');
   window.addEventListener('scroll', debounce(function() {
@@ -54,20 +76,17 @@ if (typeof window !== 'undefined') {
             return `<div class="${c}"><a href="#${link}">${item.value}</a></div>`;
         }).join("");
 
-        console.log(markup);
         tocDiv.innerHTML = '<h1 className="table-heading">Table of Contents</h1>' + markup;
     }
 
     var toc = {}
     var toc2 = [];
     function load() {
-        console.log('a');
         var sectionHeadings = document.querySelectorAll(".section h1, .section h2");
 
         var lastSection;
         sectionHeadings.forEach((heading) => {
             heading.id = formatString(heading.textContent);
-            console.log(heading);
             if (heading.nodeName == "H1") {
                 toc[heading.textContent] = []
                 lastSection = heading.textContent;
@@ -80,23 +99,14 @@ if (typeof window !== 'undefined') {
             }
         })
 
-        //sectionHeadings.forEach((heading) => {
-            
-        //    if (heading.nodeName == "H1") {
-        //        console.log("last-section " + toc[heading.textContent]);
-        //    }
-        //})
-
         reRenderTableOFContents(toc2);
     }
-    console.log(toc);
     
     window.onload = load;
 }
 
 // MAIN COMPONENT
 export default ( {data}) => {
-  console.log(data);
   const headerInfo = data.allHeaderYaml.edges[0].node;
   const footerInfo = data.allFooterYaml.edges[0].node;
   const sections = data.allSectionsYaml.edges.map(e => e.node);
@@ -117,7 +127,8 @@ export default ( {data}) => {
       </div>
     }
     
-    return <div className="layout">
+    return <div className="container">
+        <div className="layout blurred">
         <Header className="site-header">
             <img src={logo} className="logo" />
             <div className="user-manual-info">
@@ -148,6 +159,18 @@ export default ( {data}) => {
           <span>&copy; {footerInfo.copyright}</span>
           <span>{footerInfo.address}</span>
         </Footer>
+
+        </div>
+
+        <div className="lockout-overlay">
+          <div className="lockout-bg"></div>
+          <form onSubmit={unlock}>
+            <img src={logo} className="logo" />
+            <input id="password" type="password" placeholder="password"></input>
+            <button type="submit" >Unlock Documentation</button>
+            <p id="unlock-failed" className="hidden">Failed to unlock the document.</p>
+          </form> 
+        </div>
 
     </div>
 }
