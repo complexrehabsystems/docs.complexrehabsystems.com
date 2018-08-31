@@ -11,6 +11,7 @@ import "../styles/sections.scss"
 import "../styles/table.scss"
 
 import logo from "../assets/crs_3d.png"
+//import { watch } from "fs";
 
 var remark = require('remark'),
     reactRenderer = require('remark-react');
@@ -37,26 +38,61 @@ if (typeof window !== 'undefined') {
     document.getElementById('top-link').style.opacity = (pageYOffset-800);
     }, 100));
 
+    function reRenderTableOFContents(toc2) {
+        var tocDiv = document.querySelector(".table-of-contents");
+        //tocDiv.innerHTML =
+        //    <ul>
+        //        do this object.length() number of times
+        //        <li>get each property which is H1</li>
+        //        <ul>all H2 elements of H1</ul>
+        //    </ul>;
+
+        var tocItems = [];
+        const markup = toc2.map(item => {
+            const c = "toc-item " + item.type;
+            const link = formatString(item.value);
+            return `<div class="${c}"><a href="#${link}">${item.value}</a></div>`;
+        }).join("");
+
+        console.log(markup);
+        tocDiv.innerHTML = markup;
+
+    }
+
+    var toc = {}
+    var toc2 = [];
     function load() {
         console.log('a');
         var sectionHeadings = document.querySelectorAll(".section h1, .section h2");
-        console.log(sectionHeadings);
-        var toc = {}
+
+        var lastSection;
         sectionHeadings.forEach((heading) => {
-            heading.id = (heading.textContent);
+            heading.id = formatString(heading.textContent);
             console.log(heading);
             if (heading.nodeName == "H1") {
-                //toc[heading.textContent] = {}
-                //lastSection = heading.textContent;
-                console.log(heading.textContent);
+                toc[heading.textContent] = []
+                lastSection = heading.textContent;
+                toc2.push({ type: "section", value: heading.textContent });
+            }
+
+            if (heading.nodeName == "H2") {
+                toc[lastSection].push(heading.textContent);
+                toc2.push({ type: "sub-section", value: heading.textContent });
             }
         })
 
-        window.onload = load;
+        //sectionHeadings.forEach((heading) => {
+            
+        //    if (heading.nodeName == "H1") {
+        //        console.log("last-section " + toc[heading.textContent]);
+        //    }
+        //})
 
+        reRenderTableOFContents(toc2);
     }
+    console.log(toc);
     
-
+    window.onload = load;
 }
 
 // MAIN COMPONENT
@@ -76,10 +112,10 @@ export default ( {data}) => {
     }
     
     const RenderTableOfContents = (sectionInfo, index) => {
-      const link = "#" + (sectionInfo.title);
+        const link = "#" + formatString(sectionInfo.title);
       return <div className="table-contents">
           <a href={link}>{sectionInfo.title}</a>
-    </div>
+      </div>
     }
     
     return <div className="layout">
@@ -101,12 +137,12 @@ export default ( {data}) => {
           {/* Render table of contents */}
           <div className="table-of-contents">
               <h1 className="table-heading">Table of Contents</h1>
-              {sections.filter(sectionInfo => sectionInfo.published).sort(sectionInfo => sectionInfo.displayOrder).map((sectionInfo, index) => RenderTableOfContents(sectionInfo, index))}
+            {sections.filter(sectionInfo => sectionInfo.published).sort((sectionInfo1, sectionInfo2) => sectionInfo1.displayOrder > sectionInfo2.displayOrder).map((sectionInfo, index) => RenderTableOfContents(sectionInfo, index))}
           </div>
 
           {/* Render all sections of the manual from our CMS */}
           <div className="section">
-              {sections.filter(sectionInfo => sectionInfo.published).sort(sectionInfo => sectionInfo.displayOrder).map((sectionInfo, index) => RenderSection(sectionInfo, index))}
+            {sections.sort((sectionInfo1, sectionInfo2) => sectionInfo1.displayOrder > sectionInfo2.displayOrder).filter(sectionInfo => sectionInfo.published).map((sectionInfo, index) => RenderSection(sectionInfo, index))}
           </div>
 
         <Footer className="site-footer">
