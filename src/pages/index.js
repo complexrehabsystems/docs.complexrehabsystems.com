@@ -50,6 +50,7 @@ function unlock(e) {
     else {
         let errorMsg = document.getElementById("unlock-failed");
         errorMsg.classList.remove("hidden");
+        errorMsg.classList.add("shake");
     }
 
     return false;
@@ -98,7 +99,15 @@ if (typeof window !== 'undefined') {
                 toc[lastSection].push(heading.textContent);
                 toc2.push({ type: "sub-section", value: heading.textContent });
             }
-        })
+        });
+
+        let unlockFailed = document.querySelector("#unlock-failed");
+        console.log(unlockFailed);
+        unlockFailed.addEventListener("animationend", function(e) {
+          console.log(e);
+          this.classList.remove("shake");
+        });
+          
 
         reRenderTableOFContents(toc2);
     }
@@ -169,7 +178,7 @@ export default ( {data}) => {
             <img src={logo} className="logo" />
             <input id="password" type="password" placeholder="password"></input>
             <button type="submit" >Unlock Documentation</button>
-            <p id="unlock-failed" className="hidden">Failed to unlock the document.</p>
+            <p id="unlock-failed" className="hidden">Please try again.</p>
           </form> 
         </div>
 
