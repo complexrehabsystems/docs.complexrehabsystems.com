@@ -11,6 +11,7 @@ import "../styles/sections.scss"
 import "../styles/table.scss"
 
 import logo from "../assets/crs_3d.png"
+//import { watch } from "fs";
 
 var remark = require('remark'),
     reactRenderer = require('remark-react');
@@ -27,11 +28,70 @@ const debounce = (fn, time) => {
   }
 }
 
+const formatString = (str) => {
+    return str.toLowerCase().split(" ").join('-');
+}
+
 if (typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]');
   window.addEventListener('scroll', debounce(function() {
     document.getElementById('top-link').style.opacity = (pageYOffset-800);
-  }, 100));
+    }, 100));
+
+    function reRenderTableOFContents(toc2) {
+        var tocDiv = document.querySelector(".table-of-contents");
+        //tocDiv.innerHTML =
+        //    <ul>
+        //        do this object.length() number of times
+        //        <li>get each property which is H1</li>
+        //        <ul>all H2 elements of H1</ul>
+        //    </ul>;
+
+        var tocItems = [];
+        const markup = toc2.map(item => {
+            const c = "toc-item-" + item.type;
+            const link = formatString(item.value);
+            return `<div class="${c}"><a href="#${link}">${item.value}</a></div>`;
+        }).join("");
+
+        console.log(markup);
+        tocDiv.innerHTML = '<h1 className="table-heading">Table of Contents</h1>' + markup;
+    }
+
+    var toc = {}
+    var toc2 = [];
+    function load() {
+        console.log('a');
+        var sectionHeadings = document.querySelectorAll(".section h1, .section h2");
+
+        var lastSection;
+        sectionHeadings.forEach((heading) => {
+            heading.id = formatString(heading.textContent);
+            console.log(heading);
+            if (heading.nodeName == "H1") {
+                toc[heading.textContent] = []
+                lastSection = heading.textContent;
+                toc2.push({ type: "section", value: heading.textContent });
+            }
+
+            if (heading.nodeName == "H2") {
+                toc[lastSection].push(heading.textContent);
+                toc2.push({ type: "sub-section", value: heading.textContent });
+            }
+        })
+
+        //sectionHeadings.forEach((heading) => {
+            
+        //    if (heading.nodeName == "H1") {
+        //        console.log("last-section " + toc[heading.textContent]);
+        //    }
+        //})
+
+        reRenderTableOFContents(toc2);
+    }
+    console.log(toc);
+    
+    window.onload = load;
 }
 
 // MAIN COMPONENT
@@ -51,10 +111,10 @@ export default ( {data}) => {
     }
     
     const RenderTableOfContents = (sectionInfo, index) => {
-      const link = "#" + index;
+        const link = "#" + formatString(sectionInfo.title);
       return <div className="table-contents">
           <a href={link}>{sectionInfo.title}</a>
-    </div>
+      </div>
     }
     
     return <div className="layout">
