@@ -36,7 +36,7 @@ function hash(s){
   return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);              
 }
 
-function removeOverlay() {
+function hideOverlay() {
   let overlay = document.querySelector(".lockout-overlay");
   overlay.classList.add("hidden");
   let layout = document.querySelector(".layout");
@@ -57,7 +57,7 @@ function unlock(e) {
     var password = document.getElementById("password").value;
 
     if(hash(password) === 1032675042) {
-        removeOverlay();
+        hideOverlay();
         document.cookie = "authorized=true";
     }
     else {
@@ -113,9 +113,8 @@ if (typeof window !== 'undefined') {
           this.classList.remove("shake");
         });
 
-        console.log(document.cookie);
         if(document.cookie)
-          removeOverlay();
+          hideOverlay();
         else 
           showOverlay();
 
