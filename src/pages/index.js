@@ -149,7 +149,7 @@ export default ( {data}) => {
     }
     
     return <div className="container">
-        <div className="layout hidden">
+        <div className="layout hidden blurred">
         <Header className="site-header">
             <img src={logo} className="logo" />
             <div className="user-manual-info">
