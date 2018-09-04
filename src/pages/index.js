@@ -77,11 +77,11 @@ if (typeof window !== 'undefined') {
     document.getElementById('top-link').style.opacity = (pageYOffset-800);
     }, 100));
 
-    function reRenderTableOFContents(toc2) {
+    function reRenderTableOfContents(toc) {
         var tocDiv = document.querySelector(".table-of-contents");
 
         var tocItems = [];
-        const markup = toc2.map(item => {
+        const markup = toc.map(item => {
             const c = "toc-item-" + item.type;
             const link = formatString(item.value);
             return `<div class="${c}"><a href="#${link}">${item.value}</a></div>`;
@@ -90,8 +90,7 @@ if (typeof window !== 'undefined') {
         tocDiv.innerHTML = '<h1 className="table-heading">Table of Contents</h1>' + markup;
     }
 
-    var toc = {}
-    var toc2 = [];
+    var toc = [];
     function load() {
         var sectionHeadings = document.querySelectorAll(".section h1, .section h2");
 
@@ -101,12 +100,12 @@ if (typeof window !== 'undefined') {
             if (heading.nodeName == "H1") {
                 toc[heading.textContent] = []
                 lastSection = heading.textContent;
-                toc2.push({ type: "section", value: heading.textContent });
+                toc.push({ type: "section", value: heading.textContent });
             }
 
             if (heading.nodeName == "H2") {
                 toc[lastSection].push(heading.textContent);
-                toc2.push({ type: "sub-section", value: heading.textContent });
+                toc.push({ type: "sub-section", value: heading.textContent });
             }
         });
 
@@ -120,7 +119,7 @@ if (typeof window !== 'undefined') {
         else 
           showOverlay();
 
-        reRenderTableOFContents(toc2);
+        reRenderTableOfContents(toc);
     }
     
     window.onload = load;
@@ -157,7 +156,6 @@ export default ( {data}) => {
                 <h3>{headerInfo.subtitle}</h3>
                 <h3>{headerInfo.publicationDate}</h3>
             </div>
-
         </Header>
 
         <a id="top-link" href="#">
@@ -167,8 +165,7 @@ export default ( {data}) => {
 
           {/* Render table of contents */}
           <div className="table-of-contents">
-            <h1 className="table-heading">Table of Contents</h1>
-            {sections.filter(sectionInfo => sectionInfo.published).sort((sectionInfo1, sectionInfo2) => sectionInfo1.displayOrder > sectionInfo2.displayOrder).map((sectionInfo, index) => RenderTableOfContents(sectionInfo, index))}
+            <div className="spinner"></div>
           </div>
 
           {/* Render all sections of the manual from our CMS */}
