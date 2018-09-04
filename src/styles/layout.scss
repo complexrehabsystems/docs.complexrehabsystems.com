@@ -45,6 +45,7 @@ body {
     "content"
     "footer";
   grid-template-rows: auto 1fr auto;
+  transition: filter .15s ease-in-out;
 }
 
 .site-header {
@@ -482,4 +483,138 @@ body {
     color: $brand-dark;
     text-align: center;
     font-size: small;
+}
+
+.lockout-overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(0,0,0,0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lockout-bg {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: black;
+    opacity: .75;
+    transition: opacity .5s ease-in-out;
+}
+
+.lockout-overlay form {
+    background: lighten($brand-light, 20);
+    width: 300px;
+    height: 400px;
+    margin: 30vh auto;
+    max-width: 300px;
+    display: flex;
+    align-content: center;
+    vertical-align: middle;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.lockout-overlay form  img {
+    background: lighten($brand-light, 20);
+    display: flex;
+    align-content: center;
+    vertical-align: middle;
+    flex-direction: column;
+}
+
+.lockout-overlay input {
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.lockout-overlay button {
+    background: #148fce;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0 20px;
+    color: #ddd;
+}
+
+#unlock-failed {
+    color: $brand-highlight;
+    text-align: center;
+}
+
+.hidden {
+    opacity: 0;
+    z-index: -1;
+}
+
+.blurred {
+    filter: blur(15px);
+}
+
+#unlock-failed.shake {
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(2px, 0, 0);
+  }
+}
+
+.spinner {
+    display: block;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border-top: 8px solid $brand-primary;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid $brand-primary;
+    border-left: 8px solid transparent;
+    animation: spin .5s infinite ease-in-out;
+}
+
+@keyframes spin {
+    from {
+        transform: scale(1) rotate(0deg);
+    }
+    to {
+        transform: scale(1) rotate(180deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(180deg);
+    }
 }

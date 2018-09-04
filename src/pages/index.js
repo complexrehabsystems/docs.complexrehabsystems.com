@@ -32,71 +32,101 @@ const formatString = (str) => {
     return str.toLowerCase().split(" ").join('-');
 }
 
+function hash(s){
+  return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);              
+}
+
+function hideOverlay() {
+  let overlay = document.querySelector(".lockout-overlay");
+  overlay.classList.add("hidden");
+  let layout = document.querySelector(".layout");
+  layout.classList.remove("blurred");
+  layout.classList.remove("hidden");
+  window.scrollTo(0,0);
+}
+
+function showOverlay() {
+  let overlay = document.querySelector(".lockout-overlay");
+  overlay.classList.remove("hidden");
+  let layout = document.querySelector(".layout");
+  layout.classList.add("blurred");
+  layout.classList.remove("hidden");
+  window.scrollTo(0,0);
+}
+
+function unlock(e) {
+    e.preventDefault();
+    var password = document.getElementById("password").value;
+
+    if(hash(password) === 1032675042) {
+        hideOverlay();
+        document.cookie = "authorized=true";
+    }
+    else {
+        let errorMsg = document.getElementById("unlock-failed");
+        errorMsg.classList.remove("hidden");
+        errorMsg.classList.add("shake");
+    }
+
+    return false;
+}
+
 if (typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]');
   window.addEventListener('scroll', debounce(function() {
     document.getElementById('top-link').style.opacity = (pageYOffset-800);
     }, 100));
 
-    function reRenderTableOFContents(toc2) {
+    function reRenderTableOfContents(toc) {
         var tocDiv = document.querySelector(".table-of-contents");
-        //tocDiv.innerHTML =
-        //    <ul>
-        //        do this object.length() number of times
-        //        <li>get each property which is H1</li>
-        //        <ul>all H2 elements of H1</ul>
-        //    </ul>;
 
         var tocItems = [];
-        const markup = toc2.map(item => {
+        const markup = toc.map(item => {
             const c = "toc-item-" + item.type;
             const link = formatString(item.value);
             return `<div class="${c}"><a href="#${link}">${item.value}</a></div>`;
         }).join("");
 
-        console.log(markup);
         tocDiv.innerHTML = '<h1 className="table-heading">Table of Contents</h1>' + markup;
     }
 
-    var toc = {}
-    var toc2 = [];
+    var toc = [];
     function load() {
-        console.log('a');
         var sectionHeadings = document.querySelectorAll(".section h1, .section h2");
 
         var lastSection;
         sectionHeadings.forEach((heading) => {
             heading.id = formatString(heading.textContent);
-            console.log(heading);
             if (heading.nodeName == "H1") {
                 toc[heading.textContent] = []
                 lastSection = heading.textContent;
-                toc2.push({ type: "section", value: heading.textContent });
+                toc.push({ type: "section", value: heading.textContent });
             }
 
             if (heading.nodeName == "H2") {
                 toc[lastSection].push(heading.textContent);
-                toc2.push({ type: "sub-section", value: heading.textContent });
+                toc.push({ type: "sub-section", value: heading.textContent });
             }
-        })
+        });
 
-        //sectionHeadings.forEach((heading) => {
-            
-        //    if (heading.nodeName == "H1") {
-        //        console.log("last-section " + toc[heading.textContent]);
-        //    }
-        //})
+        let unlockFailed = document.querySelector("#unlock-failed");
+        unlockFailed.addEventListener("animationend", function(e) {
+          this.classList.remove("shake");
+        });
 
-        reRenderTableOFContents(toc2);
+        if(document.cookie)
+          hideOverlay();
+        else 
+          showOverlay();
+
+        reRenderTableOfContents(toc);
     }
-    console.log(toc);
     
     window.onload = load;
 }
 
 // MAIN COMPONENT
 export default ( {data}) => {
-  console.log(data);
   const headerInfo = data.allHeaderYaml.edges[0].node;
   const footerInfo = data.allFooterYaml.edges[0].node;
   const sections = data.allSectionsYaml.edges.map(e => e.node);
@@ -117,7 +147,8 @@ export default ( {data}) => {
       </div>
     }
     
-    return <div className="layout">
+    return <div className="container">
+        <div className="layout hidden blurred">
         <Header className="site-header">
             <img src={logo} className="logo" />
             <div className="user-manual-info">
@@ -125,7 +156,6 @@ export default ( {data}) => {
                 <h3>{headerInfo.subtitle}</h3>
                 <h3>{headerInfo.publicationDate}</h3>
             </div>
-
         </Header>
 
         <a id="top-link" href="#">
@@ -135,8 +165,7 @@ export default ( {data}) => {
 
           {/* Render table of contents */}
           <div className="table-of-contents">
-            <h1 className="table-heading">Table of Contents</h1>
-            {sections.filter(sectionInfo => sectionInfo.published).sort((sectionInfo1, sectionInfo2) => sectionInfo1.displayOrder > sectionInfo2.displayOrder).map((sectionInfo, index) => RenderTableOfContents(sectionInfo, index))}
+            <div className="spinner"></div>
           </div>
 
           {/* Render all sections of the manual from our CMS */}
@@ -148,6 +177,18 @@ export default ( {data}) => {
           <span>&copy; {footerInfo.copyright}</span>
           <span>{footerInfo.address}</span>
         </Footer>
+
+        </div>
+
+        <div className="lockout-overlay hidden">
+          <div className="lockout-bg"></div>
+          <form onSubmit={unlock}>
+            <img src={logo} className="logo" />
+            <input id="password" type="password" placeholder="password"></input>
+            <button type="submit" >Unlock Documentation</button>
+            <p id="unlock-failed" className="hidden">Please try again.</p>
+          </form> 
+        </div>
 
     </div>
 }
