@@ -72,6 +72,11 @@ content: >-
   choose which method you would like to measure with.
 
 
+  Within an evaluation, navigate to the measurements tab to start recording
+  measurements.  Users have the option to have digital measurements added (from
+  an existing scan) or to enter measurements that have previously been taken.
+
+
   "Point to Point" allows you to select points directly on the 3D model.
   "Orthographic" allows you to select anywhere on the screen.
 
