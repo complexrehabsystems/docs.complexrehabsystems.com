@@ -112,7 +112,7 @@ content: >-
 
 
   After taking or importing a scan, **the first thing a user should do is to
-  align the scan** so that the standard Top/Front/Left/etc views align
+  align the scan** so that the standard Top/Front/Left/etc. views align
   correctly.  A scan can be aligned on the scanning tab using the **Set Views**
   controls.
 
@@ -120,8 +120,8 @@ content: >-
   1. Go to a client screen, select an evaluation, go to the scanning tab.
 
   2. On the Scanning tab, select a scan and click the eyeball icon to view the
-  scan. A new scan will not be oriented for top/left/right/etc until these views
-  are configured.
+  scan. A new scan will not be oriented for top/left/right/etc. until these
+  views are configured.
 
   3. Manually rotate the model such that you are viewing it head on from the
   front.  Click **Edit** from the upper right controls and click **Set Front**. 
@@ -165,31 +165,31 @@ content: >-
   Measurement values can be entered by:
 
 
-  Measuring the physical person, and entering the value into the text entry
-  field.
-
-
   Clicking the blue ruler icon and taking the measurement from a scan.
 
 
   To capture a measurement from the scan, click the blue ruler icon. This will
-  add two new controls to the viewer, allowing you to select from one of two
-  measurement types:
+  prompt a list dialog to the viewer, allowing you to select from a measurement
+  type:
 
 
-  Orthographic -- the measurement will be projected onto the model from on of
-  the 5 standard views (top/left/etc). These measurements are not bound directly
-  to the model, but are snapped to the surface of a box surrounding the model.
+  * Point-to-Point -- this will measure on a straight line between any two
+  points on the model.
+
+  * Orthographic -- the measurement will be projected onto the model from one of
+  the 5 standard views (top/left/etc.). These measurements are not bound
+  directly to the model, but are snapped to the surface of a box surrounding the
+  model.
+
+  * Physical -- this measurement mode allows you to measure the physical person
+  and enter the value into the text entry field.
 
 
-  Point-to-Point -- this will measure on a straight line between any two points
-  on the model.
-
-
-  Both measurement types are taken by clicking two points on the viewer. Once
-  both points have been placed, the measurement will populate the value of the
-  corresponding measurement in the measurement list. Measurements can be edited
-  after they are taken using the red control points in the 3D viewer.
+  Both point-to-point and orthographic measurement types are taken by clicking
+  two points on the viewer. Once both points have been placed, the measurement
+  will populate the value of the corresponding measurement in the measurement
+  list. Measurements can be edited after they are taken using the blue control
+  points in the 3D viewer.
 
 
   Note:
@@ -199,7 +199,7 @@ content: >-
   entry.
 
   * Measurements that have been taken from the scan may not be edited directly
-  using the text field, but must be edited using control points in the scan
+  using the text field; these must be edited using control points in the scan
   viewer.
 
   * Measurements can be removed by clicking the small (-) symbol at the right
@@ -210,6 +210,9 @@ content: >-
 
   * If the measurement control points fall inside the model, the viewer will
   become transparent to ensure users can still edit the measurements.
+
+  * After clicking **Save** to save your measurements, use the back arrow on the
+  upper left corner to go back to the Measurements tab.
 
 
   ## Capturing Images & Video/Attaching Files
