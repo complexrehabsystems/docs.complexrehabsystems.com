@@ -69,7 +69,7 @@ content: >-
   required:
 
 
-  1. Navigate to a client evaluation and click the scanning tab.
+  1. Navigate to a client evaluation and click the Scanning tab.
 
   2. Launch the scanning application by clicking "New Scan".
      **Note: The RealSense sensor must be connected at this time.**
@@ -129,7 +129,7 @@ content: >-
   using the **Set Views** controls.  Use the below steps:
 
 
-  1. Navigate to a client evaluation and click the scanning tab.
+  1. Navigate to a client evaluation and click the Scanning tab.
 
   2. On the Scanning tab, select a scan and click the eyeball icon to view the
   scan. A new scan will not be oriented for Top/Left/Right/etc. until these
@@ -162,15 +162,24 @@ content: >-
 
   On the Measurements tab, users can add electronic records of measurements to
   the Evaluation. Users may add as many measurements to the Evaluation as they
-  want.
+  want.  
 
 
-  1. Go to a client screen, select an Evaluation, and go to the Measurements
-  tab.
+  Measurement values can be entered by:
 
-  2. A default list of measurements pre-populates and can be edited by clicking
-  the pencil icon, viewed by clicking the eyeball icon, or removed by clicking
-  the delete icon.  This default list can be modified in your user settings.
+
+  * Using the Add buttons above the default measurement list.
+
+  * Within a scan by clicking Measure button in the upper right corner and then
+  the blue ruler icon and taking the measurement from within a scan using one of
+  the three available measurement modes.
+
+
+  1. Navigate to a client evaluation and click the Measurements tab.
+
+  2. A default list of measurements will auto-populate.  These measurements can
+  be edited (or taken) by clicking the pencil icon.  This default list can be
+  modified in user settings.
 
   3. To add a measurement, click Add Physical Measurement or Add Digital
   Measurement to add a new measurement to the Evaluation. <br>**Note: Each
@@ -182,18 +191,11 @@ content: >-
   4. If physical was selected, enter the measurement and click Save.  Each
   measurement must have a value before it can be saved.
 
-  5. If digital was selected, users must first select the desired scan the
+  5. If digital was selected, users must also select the desired scan the
   measurement should be taken from.  Then select the measurement mode and click
   measure.
 
 
-  Measurement values can be entered by:
-
-
-  * Using the Add buttons above the default measurement list.
-
-  * Clicking the blue ruler icon and taking the measurement from within a scan
-  using the Measure button in the upper right corner.
 
 
   To capture a measurement from the scan, navigate to a scan by clicking the
@@ -217,8 +219,8 @@ content: >-
   Both point-to-point and orthographic measurement types are taken by clicking
   two points on the viewer. Once both points have been placed, the measurement
   will populate the value of the corresponding measurement in the measurement
-  list. Measurements can be edited after they are taken using the blue control
-  points in the 3D viewer.
+  list. These are both digital measurements and can be edited after taken using
+  the blue control points in the 3D viewer.
 
 
   Note:
@@ -232,15 +234,16 @@ content: >-
   viewer.
 
   * Measurements can be removed by clicking the small (-) symbol at the right
-  side of the measurement.
+  side of the measurement within scan view or the delete button on the
+  Measurement tab.
 
-  * Individual measurements can be viewed one at a time by clicking through the
-  blue eyeball icons in the list of measurements.
+  * Individual digital measurements can be viewed one at a time by clicking
+  through the blue eyeball icons in the list of measurements.
 
   * If the measurement control points fall inside the model, the viewer will
   become transparent to ensure users can still edit the measurements.
 
-  * After clicking **Save** to save your measurements, use the back arrow on the
+  * After clicking **Save** to save the measurements, use the back arrow on the
   upper left corner to go back to the Measurements tab.
 
 
@@ -252,20 +255,27 @@ content: >-
   automatically attached to the evaluation.
 
 
-  * Navigate to the Attachments tab.
+  1. Navigate to a client evaluation and click the Attachments tab.
 
-  * Select the media you would like to attach (e.g. photo, video, etc.).
+  2. Select the desired media to attach (e.g. photo, video, etc.).
 
-  * When choosing photo, cycle through the camera utilities (front camera, rear
-  camera, etc.) by clicking the rotating camera image in the upper left corner.
+  3. When choosing photo or video, cycle through the camera utilities (front
+  camera, rear camera, etc.) by clicking the rotating camera image in the upper
+  left corner.
 
-  * Click the camera icon and then Done to save the new image to the Attachments
-  tab.
+  4. For photo, click the camera icon to take a picture and then "Done" to save
+  the new image to the Attachments tab.  Video uses the start/end record buttons
+  then "Ok" to save.
 
 
-  Images / Video that have already been captured can be viewed by selecting them
-  from the list on the left.
+  Note:
 
+
+  * Images / Video that have already been captured can be viewed by selecting
+  them from the list on the left.
+
+  * Images and videos have a preview screen; attaching other file types (e.g.
+  PDF) will open in the device default Windows viewer.
 
   * Users have the option to type a description regarding the attached item in
   the bottom left corner after selecting it from the list.
@@ -275,30 +285,30 @@ content: >-
   on position.
 
 
-  Images and videos have a preview screen; attaching other file types (e.g. PDF)
-  will open in your default Windows viewer.
-
 
   ## Scratchpad
 
 
-  1. Click New Sheet to create a new scratchpad sheet.
+  1. Navigate to a client evaluation and click the Scratch Pad tab.
 
-  2. Entering a title in the upper left corner is optional.
+  2. Click New Sheet to create a new scratch pad sheet.
 
-  3. Use the controls in the upper right corner to select a media type; some
+  3. Entering a title in the upper left corner is optional.
+
+  4. Use the controls in the upper right corner to select a media type; some
   have additional options that will appear (e.g. pen color).
 
-  4. Save the sheet to your evaluation by clicking the Save icon in the upper
+  5. Save the sheet to the evaluation by clicking the Save icon in the upper
   right corner.
 
-  5. Click the back arrow to go back to the scratchpad tab after saving.
+  6. Click the back arrow to go back to the scratch pad tab after saving.
 
 
   ## Generate PDF Reports
 
 
   Users can download the evaluation data as a PDF report by clicking the Save as
-  PDF button when viewing an evaluation.
+  PDF button when viewing an evaluation.  The system will prompt a title
+  indicating a portion of the clients name and the date of the evaluation.
 published: true
 displayOrder: 4
