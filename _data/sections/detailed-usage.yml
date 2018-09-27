@@ -97,7 +97,7 @@ content: >-
   your computer using the save dialog or press send to save the scan to the
   evaluation and return to the scanning tab.
 
-  7. If you chose to save the scan to your computer you may now click Import
+  7. If you chose to save the scan to your computer, you may now click Import
   Scan and navigate to the scan you just saved using the file dialog and import
   the scan to your evaluation.  The eyeball icon is used to view the scan.
 
@@ -129,7 +129,7 @@ content: >-
   and fine tuning the other views if necessary.
 
   4. Once a view has been set, you should cycle through all of the views
-  (front/left/right/etc) by clicking on them individually (Top,Left, etc.) and
+  (front/left/right/etc.) by clicking on them individually (Top, Left, etc.) and
   adjust alignment if necessary using first the **Edit** button then
   corresponding** Set** option.
 
@@ -173,12 +173,12 @@ content: >-
 
 
   * Point-to-Point -- this will measure on a straight line between any two
-  points on the model.
+  points on the model.  These are bound directly to the model.
 
   * Orthographic -- the measurement will be projected onto the model from one of
   the 5 standard views (top/left/etc.). These measurements are not bound
-  directly to the model, but are snapped to the surface of a box surrounding the
-  model.
+  directly to the model and are instead snapped to the surface of a box
+  surrounding the model.
 
   * Physical -- this measurement mode allows you to measure the physical person
   and enter the value into the text entry field.
@@ -238,7 +238,7 @@ content: >-
   on position.
 
 
-  Images and videos have a preview screen; attaching other file types (ie PDF)
+  Images and videos have a preview screen; attaching other file types (i.e. PDF)
   will open in your default Windows viewer.
 
 
