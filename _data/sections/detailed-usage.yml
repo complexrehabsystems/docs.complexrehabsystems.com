@@ -76,8 +76,10 @@ content: >-
   scan using the Depth Distance and Box Scale controls on the right side of the
   screen.  Users should manually rotate the client on the screen and verify the
   client is within the bounty box.  Use the Depth Distance control to move the
-  bounty box forward and backward. <br> Tips for Best Results: <br> Set the
-  bounding box from 3-4 feet away; maintain this distance during the scan <br>
+  bounty box forward and backward. The Box Scale control is used to
+  increase/decrease the size of the bounty box.  <br> <br> Tips for Best
+  Results: <br> Set the bounding box from 3-4 feet away; maintain this distance
+  during the scan <br>
 
 
   ![null](/uploads/do_3.png)
@@ -90,10 +92,9 @@ content: >-
   the 3D data that will be formed into a 3D model.
 
   5. Slowly walk around the client, being careful to move the sensor up and down
-  to capture a complete model. <br><br>Tips for Best Results: <br> Set the
-  bounding box from 3-4 feet away; maintain this distance during the scan <br>
-  Limit the use of other graphic intense programs during the scan <br> Ensure
-  the sensor is aimed at the client and not blank space
+  to capture a complete model. <br><br>Tips for Best Results: <br> Limit the use
+  of other graphic intense programs during the scan <br> Ensure the sensor is
+  aimed at the client and not blank space
 
 
   ![null](/uploads/do_2.png)
@@ -102,8 +103,9 @@ content: >-
   ![null](/uploads/dont_2.png)
 
 
-  6. When satisfied with the model, press Complete Scan and press send to save
-  the scan to the evaluation and return to the scanning tab.
+  6. When satisfied with the model, press Complete Scan and then press send in
+  the upper right corner to save the scan to the evaluation and return to the
+  scanning tab.
 
   7. If you chose to save the scan to your computer (instead of clicking "send"
   in the previous step), you may now click Import Scan and navigate to the scan
@@ -139,12 +141,12 @@ content: >-
   the front view, and fine tuning the other views if necessary.
 
   4. Once a view has been set, you should cycle through all of the views
-  (front/left/right/etc.) by clicking on them individually (Top, Left, etc.) and
+  (Front/Left/Right/etc.) by clicking on them individually (Top, Left, etc.) and
   adjust alignment if necessary using first the **Edit** button then
   corresponding** Set** option.
 
   5. After the views are configured, you can collapse the Set Views controls by
-  clicking the carrot above the controls.
+  clicking the carrot above the controls.  This is optional.
 
   6. You should save the Evaluation now using the Save button in the upper right
   corner to ensure your configuration is saved.
@@ -170,7 +172,9 @@ content: >-
   3. To add a measurement, click Add Physical Measurement or Add Digital
   Measurement to add a new measurement to the Evaluation. <br>**Note: Each
   measurement must have a measurement site selected (e.g. "Shoulder Width")
-  using the provided drop down list.**
+  using the provided drop down list.** <br> Users may switch from physical
+  measurement mode to digital by clicking the Physical or Digital tab within the
+  Add New Measurement Screen.
 
   4. If physical was selected, enter the measurement and click Save.  Each
   measurement must have a value before it can be saved.
@@ -185,16 +189,17 @@ content: >-
   using the Measure button in the upper right corner.
 
 
-  To capture a measurement from the scan, click the blue ruler icon. This will
-  prompt a list dialog to the viewer, allowing you to select from a measurement
-  type:
+  To capture a measurement from the scan, navigate to a scan by clicking the
+  eyeball icon on the desired scan, then clicking the measure button in the
+  upper right and click the blue ruler icon. This will prompt a list dialog to
+  the viewer, allowing you to select from a measurement type:
 
 
   * Point-to-Point -- this will measure on a straight line between any two
   points on the model.  These are bound directly to the model.
 
   * Orthographic -- the measurement will be projected onto the model from one of
-  the 5 standard views (top/left/etc.). These measurements are not bound
+  the 5 standard views (Top/Left/etc.). These measurements are not bound
   directly to the model and are instead snapped to the surface of a box
   surrounding the model.
 
