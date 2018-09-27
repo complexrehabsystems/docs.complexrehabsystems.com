@@ -17,13 +17,13 @@ content: >-
   to use an existing client.  The application will look for possible duplicates
   and notify of those it finds.
      <br> **Warning: Client details are final once created. **
-  5. After confirmation you are taken directly to view the new client.
+  5. After confirmation you are taken directly to view this new client.
 
 
   ## Creating a New Evaluation
 
 
-  1. Navigate to a client view by selecting your chosen client form the list of
+  1. Navigate to a client view by selecting your chosen client from the list of
   clients.  
 
   2. Click the blue "New Evaluation" button.  This creates a blank evaluation
@@ -35,11 +35,12 @@ content: >-
   <br>Each evaluation has the following tabs:
 
 
-  * Basic info
-    * Optional Work Order ID
-    * Optional notes
+  * Basic info - allows you to enter a Work Order ID or notes.  Both are
+  optional.
+
   * Scanning - launches the scanner and allows a new scan to be taken or the
-  importing of completed scans previously taken and not saved to the evaluation
+  user may import a completed scan previously taken and not saved to the
+  evaluation
 
   * Measurements - view the existing scans, add new measurements to the
   evaluation
@@ -241,7 +242,7 @@ content: >-
 
   * Navigate to the Attachments tab.
 
-  * Select the media you would like to attach (i.e. photo, video, etc.).
+  * Select the media you would like to attach (e.g. photo, video, etc.).
 
   * When choosing photo, cycle through the camera utilities (front camera, rear
   camera, etc.) by clicking the rotating camera image in the upper left corner.
@@ -262,7 +263,7 @@ content: >-
   on position.
 
 
-  Images and videos have a preview screen; attaching other file types (i.e. PDF)
+  Images and videos have a preview screen; attaching other file types (e.g. PDF)
   will open in your default Windows viewer.
 
 
@@ -274,7 +275,7 @@ content: >-
   2. Entering a title in the upper left corner is optional.
 
   3. Use the controls in the upper right corner to select a media type; some
-  have additional options that will appear (i.e. pen color).
+  have additional options that will appear (e.g. pen color).
 
   4. Save the sheet to your evaluation by clicking the Save icon in the upper
   right corner.
