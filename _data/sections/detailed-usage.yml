@@ -23,24 +23,25 @@ content: >-
   ## Creating a New Evaluation
 
 
-  1. Navigate to a client view by selecting your chosen client from the list of
+  1. Navigate to a client view by selecting the chosen client from the list of
   clients.  
 
   2. Click the blue "New Evaluation" button.  This creates a blank evaluation
   record.
 
-  3. Open an existing evaluation by selecting the evaluation from the list. 
+  3. Open an existing evaluation by selecting the evaluation from the list in
+  the Evaluation tab. 
 
 
   <br>Each evaluation has the following tabs:
 
 
-  * Basic info - allows you to enter a Work Order ID or notes.  Both are
-  optional.
+  * Basic info - allows the user to enter a Work Order ID or notes; both are
+  optional
 
   * Scanning - launches the scanner and allows a new scan to be taken or the
-  user may import a completed scan previously taken and not saved to the
-  evaluation
+  user may import a completed scan previously taken that had not been saved to
+  the evaluation
 
   * Measurements - view the existing scans, add new measurements to the
   evaluation
@@ -53,7 +54,7 @@ content: >-
   ## Capturing and Importing Scans
 
 
-  When viewing a client evaluation, you can add multiple scans to the record. 
+  When viewing a client evaluation, multiple scans can be added to the record. 
   These can be used for:
 
 
@@ -70,14 +71,17 @@ content: >-
 
   1. Navigate to a client evaluation and click the scanning tab.
 
-  2. Launch the scanning application by clicking New Scan.
+  2. Launch the scanning application by clicking "New Scan".
      **Note: The RealSense sensor must be connected at this time.**
-  3. Set the (white) bounty box to ensure your client is completely inside the
-  scan using the Depth Distance and Box Scale controls on the right side of the
+  3. A white dimensional box will appear that restricts the data included in the
+  scan. This is referred to as the bounding box. 
+
+  4. Set the bounding box to ensure the client is completely inside the scan
+  using the Depth Distance and Box Scale controls on the right side of the
   screen.  Users should manually rotate the client on the screen and verify the
-  client is within the bounty box.  Use the Depth Distance control to move the
-  bounty box forward and backward. The Box Scale control is used to
-  increase/decrease the size of the bounty box.  <br> <br> Tips for Best
+  client is within the bounding box.  Use the Depth Distance control to move the
+  bounding box forward and backward. The Box Scale control is used to
+  increase/decrease the size of the bounding box.  <br> <br> Tips for Best
   Results: <br> Set the bounding box from 3-4 feet away; maintain this distance
   during the scan <br>
 
@@ -88,10 +92,10 @@ content: >-
   ![null](/uploads/dont_3.png)
 
 
-  4. Press the Start camera button on the right to start a streaming preview of
-  the 3D data that will be formed into a 3D model.
+  5. Press the red "Start" recording button on the right to start a streaming
+  preview of the 3D data that will be formed into a 3D model.
 
-  5. Slowly walk around the client, being careful to move the sensor up and down
+  6. Slowly walk around the client, being careful to move the sensor up and down
   to capture a complete model. <br><br>Tips for Best Results: <br> Limit the use
   of other graphic intense programs during the scan <br> Ensure the sensor is
   aimed at the client and not blank space
@@ -103,18 +107,17 @@ content: >-
   ![null](/uploads/dont_2.png)
 
 
-  6. When satisfied with the model, press Complete Scan and then press send in
-  the upper right corner to save the scan to the evaluation and return to the
-  scanning tab.
+  7. When satisfied with the model, press Complete Scan.  The data is now being
+  formed into a 3D model and will appear on the device screen; this may take a
+  few minutes.
 
-  7. If you chose to save the scan to your computer (instead of clicking "send"
-  in the previous step), you may now click Import Scan and navigate to the scan
-  you just saved using the file dialog and import the scan to your evaluation.  
+  8. If desired, the scan may be cropped prior to saving.  When ready to save,
+  press send in the upper right corner to save the scan to the evaluation and
+  return to the scanning tab.  
 
-  8. The eyeball icon is used to view the scan, if desired.
+  9. The eyeball icon is used to view the scan, if desired.
 
-  9. You should save the Evaluation now using the save button in the upper right
-  corner.
+  10. Save the Evaluation now using the save button in the upper right corner.
 
 
   ## Orient a Scan Using the Set Views Controls
@@ -126,30 +129,30 @@ content: >-
   using the **Set Views** controls.  Use the below steps:
 
 
-  1. Go to a client screen, select an evaluation, go to the scanning tab.
+  1. Navigate to a client evaluation and click the scanning tab.
 
   2. On the Scanning tab, select a scan and click the eyeball icon to view the
-  scan. A new scan will not be oriented for top/left/right/etc. until these
+  scan. A new scan will not be oriented for Top/Left/Right/etc. until these
   views are configured.
 
   3. Manually rotate the model on your screen such it is viewed head on from the
   front.  Click **Edit** from the upper right controls and click **Set Front**. 
-  <br> When you click any of these controls (e.g. Set Front) it will configure
+  <br> When selecting any of these controls (e.g. Set Front) it will configure
   the model so the current view is locked as that view (e.g. front). Only one of
-  the views needs to be set, and then all of the standard views will be
-  calculated from there. <br> We recommend always starting with the front view,
-  and fine tuning the other views if necessary.
+  the views needs to be set; the remaining standard views will be calculated
+  from there. <br> CRS recommends always starting with the front view, and fine
+  tuning the other views if necessary.
 
-  4. Once a view has been set, you should cycle through all of the views
+  4. Once a view has been set, cycle through all of the views
   (Front/Left/Right/etc.) by clicking on them individually (Top, Left, etc.) and
   adjust alignment if necessary using first the **Edit** button then
-  corresponding** Set** option.
+  corresponding **Set** option.
 
-  5. After the views are configured, you can collapse the Set Views controls by
-  clicking the carrot above the controls.  This is optional.
+  5. After the views are configured, users can collapse the Set Views controls
+  by clicking the carrot above the controls.  This is optional.
 
   6. You should save the Evaluation now using the Save button in the upper right
-  corner to ensure your configuration is saved.
+  corner to ensure the configuration is saved.
 
   7. Click the back arrow to return to the scanning tab.
 
