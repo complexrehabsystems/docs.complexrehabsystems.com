@@ -135,7 +135,7 @@ content: >-
   scan. A new scan will not be oriented for Top/Left/Right/etc. until these
   views are configured.
 
-  3. Manually rotate the model on your screen such it is viewed head on from the
+  3. Manually rotate the model on the screen such it is viewed head on from the
   front.  Click **Edit** from the upper right controls and click **Set Front**. 
   <br> When selecting any of these controls (e.g. Set Front) it will configure
   the model so the current view is locked as that view (e.g. front). Only one of
@@ -151,8 +151,8 @@ content: >-
   5. After the views are configured, users can collapse the Set Views controls
   by clicking the carrot above the controls.  This is optional.
 
-  6. You should save the Evaluation now using the Save button in the upper right
-  corner to ensure the configuration is saved.
+  6. Save the Evaluation now using the Save button in the upper right corner to
+  ensure the configuration is saved.
 
   7. Click the back arrow to return to the scanning tab.
 
