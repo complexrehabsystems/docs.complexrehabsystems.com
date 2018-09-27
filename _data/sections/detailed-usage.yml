@@ -77,9 +77,8 @@ content: >-
   ![null](/uploads/dont_3.png)
 
 
-  4.  Press the Start camera button on the left to start a streaming preview of
+  4. Press the Start camera button on the left to start a streaming preview of
   the 3D data that will be formed into a 3D model.
-
 
   5. Slowly walk around the client, being careful to move the sensor up and down
   to capture a complete model. <br><br>Tips for Best Results: <br> Set the
@@ -98,11 +97,9 @@ content: >-
   your computer using the save dialog or press send to save the scan to the
   evaluation and return to the scanning tab.
 
-
   7. If you chose to save the scan to your computer you may now click Import
   Scan and navigate to the scan you just saved using the file dialog and import
   the scan to your evaluation.  The eyeball icon is used to view the scan.
-
 
   8. You should save the Evaluation now using the save button in the upper right
   corner.
@@ -165,7 +162,9 @@ content: >-
   Measurement values can be entered by:
 
 
-  Clicking the blue ruler icon and taking the measurement from a scan.
+  * Using the Add buttons above the default measurement list.
+
+  * Clicking the blue ruler icon and taking the measurement from a scan.
 
 
   To capture a measurement from the scan, click the blue ruler icon. This will
@@ -248,13 +247,10 @@ content: >-
 
   1. Click New Sheet to create a new scratchpad sheet.
 
-
   2. Entering a title in the upper left corner is optional.
-
 
   3. Use the controls in the upper right corner to select a media type; some
   have additional options that will appear (i.e. pen color).
-
 
   4. Save the sheet to your evaluation by clicking the Save icon in the upper
   right corner.
