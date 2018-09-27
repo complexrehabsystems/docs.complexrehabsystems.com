@@ -155,8 +155,8 @@ content: >-
 
   2. Click Add Physical Measurement or Add Digital Measurement to add a new
   measurement to the Evaluation. <br>**Note: Each measurement must have a
-  measurement site selected (e.g. "Shoulder Width") using the provided
-  dropdown.**
+  measurement site selected (e.g. "Shoulder Width") using the provided drop down
+  list.**
 
   3. If physical was selected, enter the measurement and click Save.  Each
   measurement must have a value before it can be saved.
@@ -216,16 +216,45 @@ content: >-
 
 
   Video and images can be attached directly to evaluations on the Attachments
-  tab. They are captured using the standard windows camera utilities, and are
+  tab. They are captured using the standard windows camera utilities and are
   automatically attached to the evaluation.
 
 
+  * Cycle through the camera utilities (front camera, rear camera, etc.) by
+  clicking the rotating camera image in the upper left corner.
+
+
   Images / Video that have already been captured can be viewed by selecting them
-  in the dropdown.
+  from the list on the left.
+
+
+  * Users have the option to type a description regarding the attached item in
+  the bottom left corner after selecting it from the list.
+
+  * Users may also choose to exclude them in PDF reports by switching the toggle
+  (next to the description box) to the off position.  The system defaults to the
+  on position.
 
 
   Images and videos have a preview screen; attaching other file types (ie PDF)
   will open in your default Windows viewer.
+
+
+  ## Scratchpad
+
+
+  1. Click New Sheet to create a new scratchpad sheet.
+
+
+  2. Entering a title in the upper left corner is optional.
+
+
+  3. Use the controls in the upper right corner to select a media type; some
+  have additional options that will appear (ie pen color).
+
+
+  4. Save the sheet to your evaluation by clicking the Save icon in the upper
+  right corner.
 
 
   ## Generate PDF Reports
