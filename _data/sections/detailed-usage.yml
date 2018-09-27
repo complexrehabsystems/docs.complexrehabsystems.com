@@ -3,16 +3,20 @@ content: >-
   ## Creating a New Client
 
 
-  1. Go to the Home screen by clicking the house in the upper right menu panel.
+  1. The app automatically opens to the home screen.  If you are starting from a
+  different screen, go to the Home screen by clicking the house in the upper
+  right menu panel.
 
   2. Click the large blue "create New Client +" button.
 
-  3. Fill in client details.  
+  3. Fill in client details and click Next.  <br> **Note:  If you do not enter a
+  date of birth, the system will ask you to confirm you are leaving the date of
+  birth set at the default date.**
 
   4. Review Client details and confirm creation or select to use an existing
   client.  The application will look for possible duplicates and notify of those
   it finds.
-     #br **Warning: Client details are final once created. **
+     <br> **Warning: Client details are final once created. **
   5. After confirmation you are taken directly to view the new client.
 
 
@@ -20,19 +24,16 @@ content: >-
 
 
   1. Navigate to a client view by selecting your chosen client form the list of
-  clients.
+  clients.  
 
   2. Click the blue "New Evaluation" button.  This creates a blank evaluation
-  record.
-
-
-  Each evaluation has the following tabs:
+  record. <br>Each evaluation has the following tabs:
 
 
   * Basic info
     * Optional Work Order ID
     * Optional notes
-  * Scanning - launches the scanner and allows a new scan to be taken or
+  * Scanning - launches the scanner and allows a new scan to be taken or the
   importing of completed scans previously taken and not saved to the evaluation
 
   * Measurements - view the existing scans, add new measurements to the
@@ -65,22 +66,26 @@ content: >-
 
   2. Launch the scanning application by clicking New Scan.
      **Note: The RealSense sensor must be connected at this time.**
-  3. Press the Start camera button on the left to\*\* \*\*start a streaming
-  preview of the 3D data.
+  3. Set the (white) bounty box to ensure your client is completely inside the
+  scan using the Depth Distance and Box Scale controls on the right side of the
+  screen.  
 
-  4. Press the Start scanning button on the right to start capturing a 3d model.
-
-  5. Slowly walk around the client, being careful to move the sensor up and down
-  to capture a complete model.
-     Tips for Best Results:\
-     Set the bounding box from 3-4 feet away; maintain this distance during the scan\
-     Limit the use of other graphic intense programs during the scan\
-     Ensure the sensor is aimed at the client and not blank space
 
   ![null](/uploads/do_3.png)
 
 
   ![null](/uploads/dont_3.png)
+
+
+  4.  Press the Start camera button on the left to start a streaming preview of
+  the 3D data that will be formed into a 3D model.
+
+
+  5. Slowly walk around the client, being careful to move the sensor up and down
+  to capture a complete model. <br><br>Tips for Best Results: <br> Set the
+  bounding box from 3-4 feet away; maintain this distance during the scan <br>
+  Limit the use of other graphic intense programs during the scan <br> Ensure
+  the sensor is aimed at the client and not blank space
 
 
   ![null](/uploads/do_2.png)
@@ -89,36 +94,50 @@ content: >-
   ![null](/uploads/dont_2.png)
 
 
-  1. When satisfied with the model, press Complete Scan and save the file to
-  your computer using the save dialog.
+  6. When satisfied with the model, press Complete Scan and save the file to
+  your computer using the save dialog or press send to save the scan to the
+  evaluation and return to the scanning tab.
 
-  2. Close the scanning screen and return to to the scanning tab.  Click Import
-  Scan.  Navigate to the scan you just saved using the file dialog and import
-  the scan.
+
+  7. If you chose to save the scan to your computer you may now click Import
+  Scan and navigate to the scan you just saved using the file dialog and import
+  the scan to your evaluation.  The eyeball icon is used to view the scan.
+
+
+  8. You should save the Evaluation now using the save button in the upper right
+  corner.
 
 
   ## Orient a Scan Using the Set Views Controls
 
 
-  After importing a scan, **the first thing a user should do is to align the
-  scan** so that the standard Top/Front/Left/etc views align correctly.  A scan
-  can be aligned on the scanning tab using the **Set Views** controls.
+  After taking or importing a scan, **the first thing a user should do is to
+  align the scan** so that the standard Top/Front/Left/etc views align
+  correctly.  A scan can be aligned on the scanning tab using the **Set Views**
+  controls.
 
 
   1. Go to a client screen, select an evaluation, go to the scanning tab.
 
-  2. On the Scanning tab, select a scan. A new scan will not be oriented for
-  top/left/right/etc until the views are configured.
+  2. On the Scanning tab, select a scan and click the eyeball icon to view the
+  scan. A new scan will not be oriented for top/left/right/etc until these views
+  are configured.
 
-  3. Expand the **Configure Views** controls at bottom left.
-     When you click any of these controls (e.g. Set Front) it will configure the model so the current view is locked as that view (e.g. front). Only one of the views needs to be set, and then all of the standard views will be calculated from there.
-     We recommend starting with the front view, and fine tuning the other views if necessary.
-     Manually rotate the model such that you are viewing it head on from the front and click **Set Front**.
+  3. Manually rotate the model such that you are viewing it head on from the
+  front.  Click **Edit** from the upper right controls and click **Set Front**. 
+  <br> When you click any of these controls (e.g. Set Front) it will configure
+  the model so the current view is locked as that view (e.g. front). Only one of
+  the views needs to be set, and then all of the standard views will be
+  calculated from there. <br> We recommend always starting with the front view,
+  and fine tuning the other views if necessary.
+
   4. Once a view has been set, you should cycle through all of the views
-  (front/left/right/etc) and adjust alignment if necessary.
+  (front/left/right/etc) by clicking on them individually (Top,Left, etc.) and
+  adjust alignment if necessary using first the **Edit** button then
+  corresponding** Set** option.
 
   5. After the views are configured, you can collapse the Set Views controls by
-  clicking done.
+  clicking the carrot above the controls.
 
   6. You should save the Evaluation now to ensure your configuration is saved.
 
@@ -134,11 +153,13 @@ content: >-
   1. Go to a client screen, select an Evaluation, and go to the Measurements
   tab.
 
-  2. Select a Scan.
+  2. Click Add Physical Measurement or Add Digital Measurement to add a new
+  measurement to the Evaluation. <br>**Note: Each measurement must have a
+  measurement site selected (e.g. "Shoulder Width") using the provided
+  dropdown.**
 
-  3. Click Add Measurement to add a new measurement to the Evaluation.
-     **Note: Each measurement must have a measurement site selected (e.g. "Shoulder Width") using the provided dropdown.**
-  4. Each measurement must have a value before it can be saved.
+  3. If physical was selected, enter the measurement and click Save.  Each
+  measurement must have a value before it can be saved.
 
 
   Measurement values can be entered by:
