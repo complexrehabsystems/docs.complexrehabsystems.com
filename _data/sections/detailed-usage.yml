@@ -162,7 +162,8 @@ content: >-
 
   On the Measurements tab, users can add electronic records of measurements to
   the Evaluation. Users may add as many measurements to the Evaluation as they
-  want.  
+  want. Users have the option to have digital measurements added (from an
+  existing scan) or to enter measurements that have previously been taken. 
 
 
   Measurement values can be entered by:
