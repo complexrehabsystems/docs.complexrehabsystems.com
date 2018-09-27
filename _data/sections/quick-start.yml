@@ -1,14 +1,14 @@
 title: Quick Start
 content: >-
   This is a set of instructions covering the entire CRS workflow. These are not
-  step by step instructions; more detailed instructions with illustrations are
-  provided later in the Detailed Usage sections.
+  step by step instructions; more detailed instructions are provided later in
+  the Detailed Usage sections.
 
 
   ## Step One: Create a new client
 
 
-  From the Home View you can locate an existing client, or, choose to create a
+  From the Home View users can locate an existing client, or, choose to create a
   new client.
 
 
@@ -18,8 +18,8 @@ content: >-
   ## Step Two: Create an evaluation
 
 
-  When you view a new client, there will be no evaluations in the evaluation
-  screen. You must create one with the New Evaluation button.
+  At first view of a new client, there will be no evaluations in the evaluation
+  screen. One must first be created with the New Evaluation button.
 
 
   ![null](/uploads/03_a_client_details.JPG)
@@ -29,8 +29,8 @@ content: >-
 
 
   Each evaluation has several tabs worth of data (see tabs below header). On the
-  Basic Info tab, you can set an external work order ID, and enter some general
-  notes regarding the client.
+  Basic Info tab, users can set an external work order ID, and enter some
+  general notes regarding the client.
 
 
   ![null](/uploads/04_a_eval_view_basic_info.JPG)
@@ -39,21 +39,22 @@ content: >-
   ## Step Four: Capture a Scan
 
 
-  On the scanning tab, you can choose to capture a new scan.
+  On the scanning tab, users can capture a new scan.
 
 
   ![null](/uploads/04_b_a_eval_view_scans.JPG)
 
 
-  When the scanner launches, you'll see a preview of the streaming 3D data.  Use
-  the controls at the right to position the bounding box around the target. 
-  Press start to begin a scan.
+  When the scanner launches, a preview of the streaming 3D data will be
+  displayed.  Use the controls at the right to position the bounding box around
+  the target.  Press start to begin a scan.
 
 
   ![null](/uploads/10_a_scanner_preview.JPG)
 
 
-  When complete press the Send button and the model will be saved.
+  When complete, press the Complete and Send buttons and the model will be saved
+  to the evaluation.
 
 
   ![null](/uploads/10_c_scanner_review.JPG)
@@ -62,28 +63,34 @@ content: >-
   ## Step Five: Record Measurements
 
 
-  {Measurements can be taken within the scan by selecting "measure" and adding
+  Measurements can be taken within the scan by selecting "measure" and adding
   the chosen measurements or by navigating to the measurement tab of the
-  evaluation.} In order to start a new measurement you can press the "Add
-  measurement" button and a new blank measurement will be added to your list.
-  First Select the dropdown list to identify which measurement you plan on
-  using. In order to interactively edit the measurement press the "Ruler"
-  button. You will be given an option of "Point to Point" or "Orthographic" to
-  choose which method you would like to measure with.
+  evaluation. 
 
 
-  Within an evaluation, navigate to the measurements tab to start recording
-  measurements.  Users have the option to have digital measurements added (from
-  an existing scan) or to enter measurements that have previously been taken.
+  In order to start a new measurement from the Measurement tab users press the
+  "Add (Physical/Digital) measurement" button and a new screen will be displayed
+  to enter this new measurement. 
+
+  * Select from the drop down list to identify the measurement site.
+
+  * If digital, select the scan to be used and measurement type.  Physical
+  measurements should have the value typed into the text field. 
+
+  * To interactively edit the measurement press the "Ruler" button. You will be
+  given an option of "Point to Point" or "Orthographic" to choose which method
+  you would like to measure with.
 
 
-  "Point to Point" allows you to select points directly on the 3D model.
-  "Orthographic" allows you to select anywhere on the screen.
+
+  "Point to Point" allows users to select points directly on the 3D model.
+  "Orthographic" allows the user to select anywhere on the screen.
 
 
   Select a start point on the 3D model and then select an end point on the
-  model. You should see 3 control points show up along with a red line going
-  through them. You can grab any of these points to do more fine tuning.
+  model. This will prompt 3 control points to show up along with a blue line
+  going through them. Any of these points can be moved to allow more fine
+  tuning.
 
 
   ![null](/uploads/08_c_scanning_measurement_point_to_point.JPG)
@@ -92,11 +99,11 @@ content: >-
   ## Step Six: Capture images and video
 
 
-  On the Attachments tab you can upload images, video, and files to the
-  evaluation by clicking on the corresponding icon.  Pressing the "camera" or
-  "video" icon will start up your default connected computer camera with a
-  capture window.  To upload an existing image/video select the paper clip icon
-  to browse for the file.
+  On the Attachments tab upload images, video, and files to the evaluation by
+  clicking on the corresponding icon.  Pressing the "camera" or "video" icon
+  will start up the default connected computer camera with a capture window.  To
+  upload an existing image/video select the paper clip icon to browse for the
+  file.
 
 
   ![null](/uploads/04_d_a_eval_view_attachments.JPG)
@@ -111,28 +118,29 @@ content: >-
   ![null](/uploads/04_e_a_eval_view_scratchpads.JPG)
 
 
-  There is a text box at the top for you to enter a title for the drawing sheet.
+  There is a text box at the top to enter a title for the drawing sheet.
 
 
   On the top right are all the regular drawing tools:
 
 
-  * Selector: Select any of your placed draw tools on the sheet so you can edit
-  them at a later time.
+  * Selector: Select any of the placed draw tools on the sheet to be edited at a
+  later time.
 
   * Pen: Freehand pen for easy annotation
 
-  * Text Entry: Add text to your draw sheet
+  * Text Entry: Add text to the sheet
 
-  * Picture: Add images to your draw sheet
-
-
-  When you select one of the drawing tools a selector box with that tool will be
-  added to your sheet and more tool options will be added to the right side bar.
+  * Picture: Add images to the sheet
 
 
-  When you are done with the sheet press the "Save" button to be returned to the
-  previous screen.
+  When one of the drawing tools is selected a selector box with that tool will
+  be added to the sheet and more tool options will be added to the right side
+  bar.
+
+
+  When completed with the sheet press the "Save" button and the back arrow to be
+  returned to the previous screen.
 
 
   ![null](/uploads/09_a_scratchpad.JPG)
@@ -143,7 +151,6 @@ content: >-
 
   The evaluation is saved as a PDF report by clicking the Save as PDF button. 
   This button is visible in all tabs of the evaluation.  Choose the destination
-  to save it to, enter the file name you would like to save it as and click
-  save.
+  to save it to, enter the desired file name and click save.
 published: true
 displayOrder: 3
