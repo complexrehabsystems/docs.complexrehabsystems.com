@@ -57,11 +57,11 @@ content: >-
   to the evaluation.
 
 
+  ![null](/uploads/10_c_scanner_review.JPG)
+
+
   A previously saved scan (i.e. not saved to an evaluation already) can be added
   by clicking the Import Scan button and following the open dialog box.
-
-
-  ![null](/uploads/10_c_scanner_review.JPG)
 
 
   ## Step Five: Record Measurements
@@ -76,22 +76,22 @@ content: >-
   "Add (Physical/Digital) measurement" button and a new screen will be displayed
   to enter this new measurement. 
 
-  * Select from the drop down list to identify the measurement site.
+  * Select from the drop-down list to identify the measurement site.
 
   * If digital, select the scan to be used and measurement type.  Physical
   measurements should have the value typed into the text field. 
 
-  * To interactively edit the measurement press the "Ruler" button. You will be
-  given an option of "Point to Point" or "Orthographic" to choose which method
-  you would like to measure with.
+  * Interactively edit the measurement by pressing the "Ruler" button. A new
+  selection list will appear with be given an option of "Point to Point" or
+  "Orthographic" or "Physical" to choose which desired method to measure with.
 
 
 
-  "Point to Point" allows users to select points directly on the 3D model.
-  "Orthographic" allows the user to select anywhere on the screen.
+  <BLOCKQUOTE> "Point to Point" allows users to select points directly on the 3D
+  model. "Orthographic" allows the user to select anywhere on the screen.
 
 
-  Select a start point on the 3D model and then select an end point on the
+  * Select a start point on the 3D model and then select an end point on the
   model. This will prompt 3 control points to show up along with a blue line
   going through them. Any of these points can be moved to allow more fine
   tuning.
