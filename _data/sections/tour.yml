@@ -1,5 +1,5 @@
 title: Tour
-content: >
+content: >-
   ## Home Screen
 
 
@@ -41,5 +41,8 @@ content: >
   * Attached items (e.g. videos)
 
   * Scratch pad - annotation of images or notes
+
+
+  <hr>
 published: true
 displayOrder: 2
