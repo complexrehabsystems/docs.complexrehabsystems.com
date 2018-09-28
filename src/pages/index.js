@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import Header from "../components/header"
 import Footer from "../components/footer"
 import Sections from "../components/sections"
+import Markdown from 'markdown-to-jsx';
 
 import UpArrowIcon from "react-icons/lib/fa/arrow-circle-o-up"
 
@@ -15,6 +16,8 @@ import logo from "../assets/crs_3d.png"
 
 var remark = require('remark'),
     reactRenderer = require('remark-react');
+
+
 
 // UTILITIES
 const debounce = (fn, time) => {
@@ -134,9 +137,7 @@ export default ( {data}) => {
     const RenderSection = (sectionInfo, index) => {
       return <div className="manual-section" id={index}>
       <h1 className="title">{sectionInfo.title}</h1>
-      <div className="section-content">
-        {remark().use(reactRenderer).processSync(sectionInfo.content).contents}
-      </div>
+      <Markdown>{sectionInfo.content}</Markdown>
     </div>
     }
     
