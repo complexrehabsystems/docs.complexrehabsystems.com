@@ -311,5 +311,8 @@ content: >-
   Users can download the evaluation data as a PDF report by clicking the Save as
   PDF button when viewing an evaluation.  The system will prompt a title
   indicating a portion of the clients name and the date of the evaluation.
+
+
+  <hr>
 published: true
 displayOrder: 4
