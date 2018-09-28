@@ -1,8 +1,8 @@
 title: Quick Start
 content: >-
-  This is a set of instructions covering the entire CRS workflow. These are not
-  step by step instructions; more detailed instructions are provided later in
-  the Detailed Usage sections.
+  <br>This is a set of instructions covering the entire CRS workflow. These are
+  not step by step instructions; more detailed instructions are provided later
+  in the Detailed Usage sections.
 
 
   ## Step One: Create a new client
@@ -160,5 +160,7 @@ content: >-
 
 
   <hr>
+
+  <br>
 published: true
 displayOrder: 3
