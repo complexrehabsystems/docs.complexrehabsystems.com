@@ -157,5 +157,8 @@ content: >-
   The evaluation is saved as a PDF report by clicking the Save as PDF button. 
   This button is visible in all tabs of the evaluation.  Choose the destination
   to save it to, enter the desired file name and click save.
+
+
+  <hr>
 published: true
 displayOrder: 3
