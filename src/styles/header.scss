@@ -7,6 +7,7 @@ header {
     background-color: white;
     background-size: cover;
     max-height: $header-height-mobile;
+    margin: 0;
 
     .logo {
         display: block;
@@ -70,5 +71,29 @@ header {
         }
     }
 
-    margin: 0;
+    @media print {
+        .logo {
+            display: block;
+            margin-top: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 75%;
+        }
+
+        .user-manual-info {
+            background-color: $brand-primary;
+            color: white;
+            text-align: center;
+
+            h1 {
+                margin: 15px 0 25px 0;
+                font-size: 30px;
+            }
+
+            h3 {
+                margin: 10px 0 0 0;
+                font-size: 25px;
+            }
+        }
+    }
 }

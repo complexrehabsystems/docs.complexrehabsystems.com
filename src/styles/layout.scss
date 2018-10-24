@@ -1,54 +1,49 @@
 @import "./_vars.scss";
 
 body {
-  margin: 0;
-  background: white;
-  max-width: auto;
-  overflow-x: hidden;
+    margin: 0;
+    background: white;
+    max-width: auto;
+    overflow-x: hidden;
 }
 
 #top-link {
-  opacity:0;
-  position: fixed;
-  right: 0px;
-  bottom: 5px;
-  margin: 0;
-  padding: 15px;
-
-  font-size: 30px;
-  color: $brand-dark;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: $brand-light;
-
-  z-index: 1;
-
-  &:hover {
-    color: $brand-primary;
-  }
-
-  h2 {
-    font-size: 20px;
-    text-align: center;
-    font-weight: 200;
+    opacity: 0;
+    position: fixed;
+    right: 0px;
+    bottom: 5px;
     margin: 0;
-  }
+    padding: 15px;
+    font-size: 30px;
+    color: $brand-dark;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $brand-light;
+    z-index: 1;
+
+    &:hover {
+        color: $brand-primary;
+    }
+
+    h2 {
+        font-size: 20px;
+        text-align: center;
+        font-weight: 200;
+        margin: 0;
+    }
 }
 
 .layout {
-  height: 100%;
-  display: grid;
-  grid-template-areas:
-    "header"
-    "content"
-    "footer";
-  grid-template-rows: auto 1fr auto;
+    height: 100%;
+    display: grid;
+    grid-template-areas: "header" "content" "footer";
+    grid-template-rows: auto 1fr auto;
 }
 
 .site-header {
-  grid-area: header;
+    grid-area: header;
 }
 
 .content {
@@ -176,27 +171,30 @@ body {
 }
 
 .site-footer {
-  grid-area: footer;
+    grid-area: footer;
 }
 
 #signup {
-  background-color: lighten($brand-light, 5);
-  h2 {
-    font-weight: 200;
-    max-width: 350px;
-    text-align: center;
-  }
-  img {
-    max-width: 250px;
-    border-radius: 5px;
-    margin: 10px auto;
-  }
-  form {
-    input {
-      width: 100%;
-      margin: 5px;
+    background-color: lighten($brand-light, 5);
+
+    h2 {
+        font-weight: 200;
+        max-width: 350px;
+        text-align: center;
     }
-  }
+
+    img {
+        max-width: 250px;
+        border-radius: 5px;
+        margin: 10px auto;
+    }
+
+    form {
+        input {
+            width: 100%;
+            margin: 5px;
+        }
+    }
 }
 
 #about {
@@ -248,7 +246,7 @@ body {
         .joe-atp {
             max-height: 500px;
             margin-left: -40px;
-            margin-bottom:0;
+            margin-bottom: 0;
         }
     }
 
@@ -310,7 +308,6 @@ body {
             max-width: 40vw;
             justify-self: start;
         }
-
     }
 
     @media(min-width: $breakpoint-xxl) {
@@ -329,146 +326,150 @@ body {
 }
 
 #team {
-  background-color: darken($brand-light, 5);
-
-  h1 {
     background-color: darken($brand-light, 5);
-    color: $brand-dark;
-  }
-
-  h2 {
-    font-weight: 200;
-    text-align: center;
-    margin: 0;
-  }
-
-  .people {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5vh;
-    max-width: 1280px;
-
-    @media (min-width: $breakpoint-md) {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-
-  }
-  .person {
-    width: 400px;
-    height: 400px;;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
     h1 {
-        color: $brand-light;
+        background-color: darken($brand-light, 5);
+        color: $brand-dark;
     }
 
-    .social-icons {
-      width: 100%;
-      align-self: center;
-      a {
-        font-size: 1.7em;
-        color: $brand-light;
-        margin: 0 10px;;
-
-        &:hover {
-          color: lighten($brand-light, 10);
-        }
-      }
-    }
-
-    img {
-      width: 80%;
-      height: 80%;
-      border-radius: 5px;
-      transition: opacity .3s ease-in-out;
-    }
-
-    .overlay {
-      width: 100%;
-      height: 100%;
-      margin-top:-365px;
-      padding: 15px;
-      background-color: darken($brand-primary, 5);
-      color: $brand-light;
-      opacity: 0;
-      transition: opacity .3s ease-in-out;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      border-radius: 5px;
-
-      h1 {
-        font-size: 1.2em;
-        margin: 12px;
-        padding: 0;
-        background-color: darken($brand-primary, 5);
-      }
-
-      h2 {
-        font-size: 1.5em;
-      }
-
-      .about {
-        margin: 10px;
-        flex-grow: 1;
-        color: lighten($brand-light, 10);
-        overflow-y: auto;
-      }
-
-      p {
-        font-size: 1.05em;
+    h2 {
         font-weight: 200;
         text-align: center;
+        margin: 0;
+    }
+
+    .people {
         display: flex;
-        margin-bottom: 10px;
-      }
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5vh;
+        max-width: 1280px;
 
-      a.hiring {
-        font-weight: 400;
-        border-radius: 5px;
-        padding: 20px;
-        background: #ddd;
-        color: #148fce;
-        align-self: center;
-        transform: rotateX(90deg);
-        transition: transform .4s ease-in-out;
-        margin-bottom: 30px;
-      }
-
-      a.hiring:hover {
-        background: #eee;
-      }
-
+        @media (min-width: $breakpoint-md) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
     }
 
-    &:hover {
-      img {
-        opacity: .5;
-      }
-      .overlay {
-        opacity: .9;
-      }
-      a.hiring {
-        transform: rotateX(0);
-      }
+    .person {
+        width: 400px;
+        height: 400px;
+        ;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            color: $brand-light;
+        }
+
+        .social-icons {
+            width: 100%;
+            align-self: center;
+
+            a {
+                font-size: 1.7em;
+                color: $brand-light;
+                margin: 0 10px;
+                ;
+
+                &:hover {
+                    color: lighten($brand-light, 10);
+                }
+            }
+        }
+
+        img {
+            width: 80%;
+            height: 80%;
+            border-radius: 5px;
+            transition: opacity .3s ease-in-out;
+        }
+
+        .overlay {
+            width: 100%;
+            height: 100%;
+            margin-top: -365px;
+            padding: 15px;
+            background-color: darken($brand-primary, 5);
+            color: $brand-light;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+
+            h1 {
+                font-size: 1.2em;
+                margin: 12px;
+                padding: 0;
+                background-color: darken($brand-primary, 5);
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .about {
+                margin: 10px;
+                flex-grow: 1;
+                color: lighten($brand-light, 10);
+                overflow-y: auto;
+            }
+
+            p {
+                font-size: 1.05em;
+                font-weight: 200;
+                text-align: center;
+                display: flex;
+                margin-bottom: 10px;
+            }
+
+            a.hiring {
+                font-weight: 400;
+                border-radius: 5px;
+                padding: 20px;
+                background: #ddd;
+                color: #148fce;
+                align-self: center;
+                transform: rotateX(90deg);
+                transition: transform .4s ease-in-out;
+                margin-bottom: 30px;
+            }
+
+            a.hiring:hover {
+                background: #eee;
+            }
+        }
+
+        &:hover {
+            img {
+                opacity: .5;
+            }
+
+            .overlay {
+                opacity: .9;
+            }
+
+            a.hiring {
+                transform: rotateX(0);
+            }
+        }
     }
-  }
 }
 
 .signup-success {
-  margin: 0;
-  text-align: center;
-  color: $brand-success;
-  display: none;
+    margin: 0;
+    text-align: center;
+    color: $brand-success;
+    display: none;
 }
 
 .mail-icon {
