@@ -3,14 +3,14 @@ content: >-
   ## Home Screen
 
 
-  The home screen is where you can:
+  The home screen is where users can:
 
 
   * Find existing client records
 
   * Create new client records
 
-  * Add clients to your "my client" list by selecting or un-selecting the star
+  * Add clients to the "my client" list by selecting or un-selecting the star
   shown to the right of the client's age
 
 
@@ -24,5 +24,29 @@ content: >-
   * Client details
 
   * Evaluations
+
+
+  ## Evaluation Screen
+
+
+  The evaluation screen houses all information related to a client's specific
+  evaluation.  This includes:
+
+  * Clinical Evaluation Form
+
+  * Scans
+
+  * Measurements
+
+  * Attached items (e.g. videos)
+
+  * Scratch pad - annotation of images or notes
+
+
+  <br>
+
+  <hr>
+
+  <br>
 published: true
 displayOrder: 2

@@ -3,37 +3,45 @@ content: >-
   ## Creating a New Client
 
 
-  1. Go to the Home screen by clicking the house in the upper right menu panel.
+  1. The app automatically opens to the home screen.  Users starting from a
+  different screen should go to the Home screen by clicking the house in the
+  upper right menu panel.
 
   2. Click the large blue "create New Client +" button.
 
-  3. Fill in client details.  
+  3. Fill in client details and click Next.  <br> **Note:  If a date of birth is
+  not entered, the system will ask confirmation to leave the date of birth set
+  at the default date.**
 
-  4. Review Client details and confirm creation or select to use an existing
-  client.  The application will look for possible duplicates and notify of those
-  it finds.
-     #br **Warning: Client details are final once created. **
-  5. After confirmation you are taken directly to view the new client.
+  4. Review Client details and confirm creation by clicking "Create +" or select
+  to use an existing client.  The application will look for possible duplicates
+  and notify of those it finds.
+     <br> **Warning: Client details are final once created. **
+  5. After confirmation users are taken directly to view this new client.
 
 
   ## Creating a New Evaluation
 
 
-  1. Navigate to a client view by selecting your chosen client form the list of
-  clients.
+  1. Navigate to a client view by selecting the chosen client from the list of
+  clients.  
 
   2. Click the blue "New Evaluation" button.  This creates a blank evaluation
   record.
 
+  3. Open an existing evaluation by selecting the evaluation from the list in
+  the Evaluation tab. 
 
-  Each evaluation has the following tabs:
+
+  <br>Each evaluation has the following tabs:
 
 
-  * Basic info
-    * Optional Work Order ID
-    * Optional notes
-  * Scanning - launches the scanner and allows a new scan to be taken or
-  importing of completed scans previously taken and not saved to the evaluation
+  * Basic info - allows the user to enter a Work Order ID or notes; both are
+  optional
+
+  * Scanning - launches the scanner and allows a new scan to be taken or the
+  user may import a completed scan previously taken that had not been saved to
+  the evaluation
 
   * Measurements - view the existing scans, add new measurements to the
   evaluation
@@ -46,7 +54,7 @@ content: >-
   ## Capturing and Importing Scans
 
 
-  When viewing a client evaluation, you can add multiple scans to the record. 
+  When viewing a client evaluation, multiple scans can be added to the record. 
   These can be used for:
 
 
@@ -61,26 +69,36 @@ content: >-
   required:
 
 
-  1. Navigate to a client evaluation and click the scanning tab.
+  1. Navigate to a client evaluation and click the Scanning tab.
 
-  2. Launch the scanning application by clicking New Scan.
+  2. Launch the scanning application by clicking "New Scan".
      **Note: The RealSense sensor must be connected at this time.**
-  3. Press the Start camera button on the left to\*\* \*\*start a streaming
-  preview of the 3D data.
+  3. A white dimensional box will appear that restricts the data included in the
+  scan. This is referred to as the bounding box. 
 
-  4. Press the Start scanning button on the right to start capturing a 3d model.
+  4. Set the bounding box to ensure the client is completely inside the scan
+  using the Depth Distance and Box Scale controls on the right side of the
+  screen.  Users should manually rotate the client on the screen and verify the
+  client is within the bounding box.  Use the Depth Distance control to move the
+  bounding box forward and backward. The Box Scale control is used to
+  increase/decrease the size of the bounding box.  <br> <br> Tips for Best
+  Results: <br> Set the bounding box from 3-4 feet away; maintain this distance
+  during the scan <br>
 
-  5. Slowly walk around the client, being careful to move the sensor up and down
-  to capture a complete model.
-     Tips for Best Results:\
-     Set the bounding box from 3-4 feet away; maintain this distance during the scan\
-     Limit the use of other graphic intense programs during the scan\
-     Ensure the sensor is aimed at the client and not blank space
 
   ![null](/uploads/do_3.png)
 
 
   ![null](/uploads/dont_3.png)
+
+
+  5. Press the red "Start" recording button on the right to start a streaming
+  preview of the 3D data that will be formed into a 3D model.
+
+  6. Slowly walk around the client, being careful to move the sensor up and down
+  to capture a complete model. <br><br>Tips for Best Results: <br> Limit the use
+  of other graphic intense programs during the scan <br> Ensure the sensor is
+  aimed at the client and not blank space
 
 
   ![null](/uploads/do_2.png)
@@ -89,38 +107,54 @@ content: >-
   ![null](/uploads/dont_2.png)
 
 
-  1. When satisfied with the model, press Complete Scan and save the file to
-  your computer using the save dialog.
+  7. When satisfied with the model, press Complete Scan.  The data is now being
+  formed into a 3D model and will appear on the device screen; this may take a
+  few minutes.
 
-  2. Close the scanning screen and return to to the scanning tab.  Click Import
-  Scan.  Navigate to the scan you just saved using the file dialog and import
-  the scan.
+  8. If desired, the scan may be cropped prior to saving.  When ready to save,
+  press send in the upper right corner to save the scan to the evaluation and
+  return to the scanning tab.  
+
+  9. The eyeball icon is used to view the scan, if desired.
+
+  10. Save the Evaluation now using the save button in the upper right corner.
 
 
   ## Orient a Scan Using the Set Views Controls
 
 
-  After importing a scan, **the first thing a user should do is to align the
-  scan** so that the standard Top/Front/Left/etc views align correctly.  A scan
-  can be aligned on the scanning tab using the **Set Views** controls.
+  After taking or importing a scan, **the first thing a user should do is to
+  align the scan** so that the standard Top/Front/Left/etc. views align
+  correctly.  A scan can be aligned on the scanning tab (within the scan view)
+  using the **Set Views** controls.  Use the below steps:
 
 
-  1. Go to a client screen, select an evaluation, go to the scanning tab.
+  1. Navigate to a client evaluation and click the Scanning tab.
 
-  2. On the Scanning tab, select a scan. A new scan will not be oriented for
-  top/left/right/etc until the views are configured.
+  2. On the Scanning tab, select a scan and click the eyeball icon to view the
+  scan. A new scan will not be oriented for Top/Left/Right/etc. until these
+  views are configured.
 
-  3. Expand the **Configure Views** controls at bottom left.
-     When you click any of these controls (e.g. Set Front) it will configure the model so the current view is locked as that view (e.g. front). Only one of the views needs to be set, and then all of the standard views will be calculated from there.
-     We recommend starting with the front view, and fine tuning the other views if necessary.
-     Manually rotate the model such that you are viewing it head on from the front and click **Set Front**.
-  4. Once a view has been set, you should cycle through all of the views
-  (front/left/right/etc) and adjust alignment if necessary.
+  3. Manually rotate the model on the screen such it is viewed head on from the
+  front.  Click **Edit** from the upper right controls and click **Set Front**. 
+  <br> When selecting any of these controls (e.g. Set Front) it will configure
+  the model so the current view is locked as that view (e.g. front). Only one of
+  the views needs to be set; the remaining standard views will be calculated
+  from there. <br> CRS recommends always starting with the front view, and fine
+  tuning the other views if necessary.
 
-  5. After the views are configured, you can collapse the Set Views controls by
-  clicking done.
+  4. Once a view has been set, cycle through all of the views
+  (Front/Left/Right/etc.) by clicking on them individually (Top, Left, etc.) and
+  adjust alignment if necessary using first the **Edit** button then
+  corresponding **Set** option.
 
-  6. You should save the Evaluation now to ensure your configuration is saved.
+  5. After the views are configured, users can collapse the Set Views controls
+  by clicking the carrot above the controls.  This is optional.
+
+  6. Save the Evaluation now using the Save button in the upper right corner to
+  ensure the configuration is saved.
+
+  7. Click the back arrow to return to the scanning tab.
 
 
   ## Taking Measurements
@@ -128,47 +162,66 @@ content: >-
 
   On the Measurements tab, users can add electronic records of measurements to
   the Evaluation. Users may add as many measurements to the Evaluation as they
-  want.
-
-
-  1. Go to a client screen, select an Evaluation, and go to the Measurements
-  tab.
-
-  2. Select a Scan.
-
-  3. Click Add Measurement to add a new measurement to the Evaluation.
-     **Note: Each measurement must have a measurement site selected (e.g. "Shoulder Width") using the provided dropdown.**
-  4. Each measurement must have a value before it can be saved.
+  want. Users have the option to have digital measurements added (from an
+  existing scan) or to enter measurements that have previously been taken. 
 
 
   Measurement values can be entered by:
 
 
-  Measuring the physical person, and entering the value into the text entry
-  field.
+  * Using the Add buttons above the default measurement list.
+
+  * Within a scan by clicking Measure button in the upper right corner and then
+  the blue ruler icon and taking the measurement from within a scan using one of
+  the three available measurement modes.
 
 
-  Clicking the blue ruler icon and taking the measurement from a scan.
+  1. Navigate to a client evaluation and click the Measurements tab.
+
+  2. A default list of measurements will auto-populate.  These measurements can
+  be edited (or taken) by clicking the pencil icon.  This default list can be
+  modified in user settings.
+
+  3. To add a measurement, click Add Physical Measurement or Add Digital
+  Measurement to add a new measurement to the Evaluation. <br>**Note: Each
+  measurement must have a measurement site selected (e.g. "Shoulder Width")
+  using the provided drop down list.** <br> Users may switch from physical
+  measurement mode to digital by clicking the Physical or Digital tab within the
+  Add New Measurement Screen.
+
+  4. If physical was selected, enter the measurement and click Save.  Each
+  measurement must have a value before it can be saved.
+
+  5. If digital was selected, users must also select the desired scan the
+  measurement should be taken from.  Then select the measurement mode and click
+  measure.
 
 
-  To capture a measurement from the scan, click the blue ruler icon. This will
-  add two new controls to the viewer, allowing you to select from one of two
-  measurement types:
 
 
-  Orthographic -- the measurement will be projected onto the model from on of
-  the 5 standard views (top/left/etc). These measurements are not bound directly
-  to the model, but are snapped to the surface of a box surrounding the model.
+  To capture a measurement from the scan, navigate to a scan by clicking the
+  eyeball icon on the desired scan, then clicking the measure button in the
+  upper right and click the blue ruler icon. This will prompt a list dialog to
+  the viewer, allowing you to select from a measurement type:
 
 
-  Point-to-Point -- this will measure on a straight line between any two points
-  on the model.
+  * Point-to-Point -- this will measure on a straight line between any two
+  points on the model.  These are bound directly to the model.
+
+  * Orthographic -- the measurement will be projected onto the model from one of
+  the 5 standard views (Top/Left/etc.). These measurements are not bound
+  directly to the model and are instead snapped to the surface of a box
+  surrounding the model.
+
+  * Physical -- this measurement mode allows you to measure the physical person
+  and enter the value into the text entry field.
 
 
-  Both measurement types are taken by clicking two points on the viewer. Once
-  both points have been placed, the measurement will populate the value of the
-  corresponding measurement in the measurement list. Measurements can be edited
-  after they are taken using the red control points in the 3D viewer.
+  Both point-to-point and orthographic measurement types are taken by clicking
+  two points on the viewer. Once both points have been placed, the measurement
+  will populate the value of the corresponding measurement in the measurement
+  list. These are both digital measurements and can be edited after taken using
+  the blue control points in the 3D viewer.
 
 
   Note:
@@ -178,39 +231,92 @@ content: >-
   entry.
 
   * Measurements that have been taken from the scan may not be edited directly
-  using the text field, but must be edited using control points in the scan
+  using the text field; these must be edited using control points in the scan
   viewer.
 
   * Measurements can be removed by clicking the small (-) symbol at the right
-  side of the measurement.
+  side of the measurement within scan view or the delete button on the
+  Measurement tab.
 
-  * Individual measurements can be viewed one at a time by clicking through the
-  blue eyeball icons in the list of measurements.
+  * Individual digital measurements can be viewed one at a time by clicking
+  through the blue eyeball icons in the list of measurements.
 
   * If the measurement control points fall inside the model, the viewer will
   become transparent to ensure users can still edit the measurements.
+
+  * After clicking **Save** to save the measurements, use the back arrow on the
+  upper left corner to go back to the Measurements tab.
 
 
   ## Capturing Images & Video/Attaching Files
 
 
   Video and images can be attached directly to evaluations on the Attachments
-  tab. They are captured using the standard windows camera utilities, and are
+  tab. They are captured using the standard windows camera utilities and are
   automatically attached to the evaluation.
 
 
-  Images / Video that have already been captured can be viewed by selecting them
-  in the dropdown.
+  1. Navigate to a client evaluation and click the Attachments tab.
+
+  2. Select the desired media to attach (e.g. photo, video, etc.).
+
+  3. When choosing photo or video, cycle through the camera utilities (front
+  camera, rear camera, etc.) by clicking the rotating camera image in the upper
+  left corner.
+
+  4. For photo, click the camera icon to take a picture and then "Done" to save
+  the new image to the Attachments tab.  Video uses the start/end record buttons
+  then "Ok" to save.
 
 
-  Images and videos have a preview screen; attaching other file types (ie PDF)
-  will open in your default Windows viewer.
+  Note:
+
+
+  * Images / Video that have already been captured can be viewed by selecting
+  them from the list on the left.
+
+  * Images and videos have a preview screen; attaching other file types (e.g.
+  PDF) will open in the device default Windows viewer.
+
+  * Users have the option to type a description regarding the attached item in
+  the bottom left corner after selecting it from the list.
+
+  * Users may also choose to exclude them in PDF reports by switching the toggle
+  (next to the description box) to the off position.  The system defaults to the
+  on position.
+
+
+
+  ## Scratchpad
+
+
+  1. Navigate to a client evaluation and click the Scratch Pad tab.
+
+  2. Click New Sheet to create a new scratch pad sheet.
+
+  3. Entering a title in the upper left corner is optional.
+
+  4. Use the controls in the upper right corner to select a media type; some
+  have additional options that will appear (e.g. pen color).
+
+  5. Save the sheet to the evaluation by clicking the Save icon in the upper
+  right corner.
+
+  6. Click the back arrow to go back to the scratch pad tab after saving.
 
 
   ## Generate PDF Reports
 
 
   Users can download the evaluation data as a PDF report by clicking the Save as
-  PDF button when viewing an evaluation.
+  PDF button when viewing an evaluation.  The system will prompt a title
+  indicating a portion of the Client's name and the date of the evaluation.
+
+
+  <br>
+
+  <hr>
+
+  <br>
 published: true
 displayOrder: 4
