@@ -1,23 +1,25 @@
 title: Detailed Usage
 content: >-
+  The application automatically opens to the Client List (Home page) after
+  logging in.  Users starting from a different screen in any of the below steps
+  should navigate to the Client list by clicking the Home page icon in the upper
+  right menu panel.
+
+
   ## Creating a New Client
 
 
-  1. The app automatically opens to the home screen.  Users starting from a
-  different screen should go to the Home screen by clicking the house in the
-  upper right menu panel.
+  1. Click the large blue "create New Client +" button.
 
-  2. Click the large blue "create New Client +" button.
-
-  3. Fill in client details and click Next.  <br> **Note:  If a date of birth is
+  2. Fill in client details and click Next.  <br> **Note:  If a date of birth is
   not entered, the system will ask confirmation to leave the date of birth set
   at the default date.**
 
-  4. Review Client details and confirm creation by clicking "Create +" or select
+  3. Review Client details and confirm creation by clicking "Create +" or select
   to use an existing client.  The application will look for possible duplicates
   and notify of those it finds.
      <br> **Warning: Client details are final once created. **
-  5. After confirmation users are taken directly to view this new client.
+  4. After confirmation users are taken directly to view this new client.
 
 
   ## Creating a New Evaluation
@@ -78,12 +80,12 @@ content: >-
 
   4. Set the bounding box to ensure the client is completely inside the scan
   using the Depth Distance and Box Scale controls on the right side of the
-  screen.  Users should manually rotate the client on the screen and verify the
-  client is within the bounding box.  Use the Depth Distance control to move the
-  bounding box forward and backward. The Box Scale control is used to
-  increase/decrease the size of the bounding box.  <br> <br> Tips for Best
-  Results: <br> Set the bounding box from 3-4 feet away; maintain this distance
-  during the scan <br>
+  screen.  Users should manually rotate the client on the screen (using device
+  touch screen functionality or a mouse) and verify the client is within the
+  bounding box.  Use the Depth Distance control to move the bounding box forward
+  and backward. The Box Scale control is used to increase/decrease the size of
+  the bounding box.  <br> <br> Tips for Best Results: <br> Set the bounding box
+  from 3-4 feet away; maintain this distance during the scan <br>
 
 
   ![null](/uploads/do_3.png)
@@ -98,7 +100,8 @@ content: >-
   6. Slowly walk around the client, being careful to move the sensor up and down
   to capture a complete model. <br><br>Tips for Best Results: <br> Limit the use
   of other graphic intense programs during the scan <br> Ensure the sensor is
-  aimed at the client and not blank space
+  aimed at the client and not blank space (br) Be careful to prevent abrupt
+  movement of the sensor
 
 
   ![null](/uploads/do_2.png)
@@ -136,7 +139,7 @@ content: >-
   views are configured.
 
   3. Manually rotate the model on the screen such it is viewed head on from the
-  front.  Click **Edit** from the upper right controls and click **Set Front**. 
+  front.  Click **Edit** from the upper left controls and click **Set Front**. 
   <br> When selecting any of these controls (e.g. Set Front) it will configure
   the model so the current view is locked as that view (e.g. front). Only one of
   the views needs to be set; the remaining standard views will be calculated
@@ -206,7 +209,9 @@ content: >-
 
 
   * Point-to-Point -- this will measure on a straight line between any two
-  points on the model.  These are bound directly to the model.
+  points on the model.  These are bound directly to the model.  Users should
+  place the start and end point of the measurement on the model after selecting
+  this measurement mode.
 
   * Orthographic -- the measurement will be projected onto the model from one of
   the 5 standard views (Top/Left/etc.). These measurements are not bound
@@ -279,11 +284,13 @@ content: >-
   PDF) will open in the device default Windows viewer.
 
   * Users have the option to type a description regarding the attached item in
-  the bottom left corner after selecting it from the list.
+  the bottom right corner after selecting it from the list.
 
-  * Users may also choose to exclude them in PDF reports by switching the toggle
-  (next to the description box) to the off position.  The system defaults to the
-  on position.
+  * Users may also choose to exclude attachments in PDF reports by switching the
+  toggle (next to the description box) to the off position.  The system defaults
+  to the on position.
+
+  Click save to update.
 
 
 
