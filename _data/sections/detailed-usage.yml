@@ -38,8 +38,8 @@ content: >-
   <br>Each evaluation has the following tabs:
 
 
-  * Basic info - allows the user to enter a Work Order ID or notes; both are
-  optional
+  * Clinical Evaluation - allows the user to enter sections of data such as
+  contact information, home environments, skin integrity and more
 
   * Scanning - launches the scanner and allows a new scan to be taken or the
   user may import a completed scan previously taken that had not been saved to
@@ -200,8 +200,6 @@ content: >-
   measure.
 
 
-
-
   To capture a measurement from the scan, navigate to a scan by clicking the
   eyeball icon on the desired scan, then clicking the measure button in the
   upper right and click the blue ruler icon. This will prompt a list dialog to
@@ -209,9 +207,10 @@ content: >-
 
 
   * Point-to-Point -- this will measure on a straight line between any two
-  points on the model.  These are bound directly to the model.  Users should
-  place the start and end point of the measurement on the model after selecting
-  this measurement mode.
+  points on the model.   Users should place the start and end point of the
+  measurement on the model after selecting this measurement mode.  Point to
+  point measurement mode should be used when taking measurements of clients with
+  asymmetry for accuracy; this measurement is bound directly to the model. 
 
   * Orthographic -- the measurement will be projected onto the model from one of
   the 5 standard views (Top/Left/etc.). These measurements are not bound
@@ -226,7 +225,8 @@ content: >-
   two points on the viewer. Once both points have been placed, the measurement
   will populate the value of the corresponding measurement in the measurement
   list. These are both digital measurements and can be edited after taken using
-  the blue control points in the 3D viewer.
+  first the blue view button and then modifying the blue control points in the
+  3D viewer.
 
 
   Note:
@@ -244,7 +244,7 @@ content: >-
   Measurement tab.
 
   * Individual digital measurements can be viewed one at a time by clicking
-  through the blue eyeball icons in the list of measurements.
+  through the blue view icons in the list of measurements.
 
   * If the measurement control points fall inside the model, the viewer will
   become transparent to ensure users can still edit the measurements.
@@ -289,10 +289,7 @@ content: >-
   * Users may also choose to exclude attachments in PDF reports by switching the
   toggle (next to the description box) to the off position.  The system defaults
   to the on position.
-
-  Click save to update.
-
-
+    Click save to update.
 
   ## Scratchpad
 
