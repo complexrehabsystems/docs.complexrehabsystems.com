@@ -25,15 +25,15 @@ content: >-
   ![null](/uploads/03_a_client_details.JPG)
 
 
-  ## Step Three: Add notes to the Basic Info section of the evaluation
+  ## Step Three: Create an Eval Form
 
 
-  Each evaluation has several tabs worth of data (see tabs below header). On the
-  Basic Info tab, users can set an external work order ID, and enter some
-  general notes regarding the client.
+  Each evaluation opens to Clicinal Evaluations tab.  Each evaluation has
+  several tabs worth of data (see tabs below header). On the Clincial
+  Evaluations tab, users can open sections to enter information.
 
 
-  ![null](/uploads/04_a_eval_view_basic_info.JPG)
+  ![null](/uploads/screenshot-57-.png)
 
 
   ## Step Four: Capture a Scan
@@ -76,6 +76,7 @@ content: >-
   "Add (Physical/Digital) measurement" button and a new screen will be displayed
   to enter this new measurement.
 
+
   * Select from the drop-down list to identify the measurement site.
 
   * If digital, select the scan to be used and measurement type.  Physical
@@ -84,7 +85,6 @@ content: >-
   * Interactively edit the measurement by pressing the "Ruler" button. A new
   selection list will appear with be given an option of "Point to Point" or
   "Orthographic" or "Physical" to choose which desired method to measure with.
-
 
 
   <blockquote> "Point to Point" allows users to select points directly on the 3D
