@@ -88,8 +88,8 @@ content: >-
 
 
   <blockquote> "Point to Point" allows users to select points directly on the 3D
-  model. "Orthographic" allows the user to select anywhere on the screen.
-  </blockquote>
+  model; this measurement mode is best for clients with asymmetry.
+  "Orthographic" allows the user to select anywhere on the screen. </blockquote>
 
 
   * Select a start point on the 3D model and then select an end point on the
