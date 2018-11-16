@@ -100,7 +100,7 @@ content: >-
   6. Slowly walk around the client, being careful to move the sensor up and down
   to capture a complete model. <br><br>Tips for Best Results: <br> Limit the use
   of other graphic intense programs during the scan <br> Ensure the sensor is
-  aimed at the client and not blank space (br) Be careful to prevent abrupt
+  aimed at the client and not blank space <br> Be careful to prevent abrupt
   movement of the sensor
 
 
@@ -146,9 +146,9 @@ content: >-
   from there. <br> CRS recommends always starting with the front view, and fine
   tuning the other views if necessary.
 
-  4. Once a view has been set, cycle through all of the views
+  4. Once a view has been set, cycle through all the views
   (Front/Left/Right/etc.) by clicking on them individually (Top, Left, etc.) and
-  adjust alignment if necessary using first the **Edit** button then
+  adjust alignment if necessary, using first the **Edit** button then
   corresponding **Set** option.
 
   5. After the views are configured, users can collapse the Set Views controls
@@ -317,6 +317,5 @@ content: >-
   Users can download the evaluation data as a PDF report by clicking the Save as
   PDF button when viewing an evaluation.  The system will prompt a title
   indicating a portion of the Client's name and the date of the evaluation.
-
 published: true
 displayOrder: 4
