@@ -12,9 +12,6 @@ import "../styles/table.scss";
 
 import logo from "../assets/crs_3d.png";
 
-var remark = require("remark"),
-  reactRenderer = require("remark-react");
-
 // UTILITIES
 const debounce = (fn, time) => {
   let timeout;
