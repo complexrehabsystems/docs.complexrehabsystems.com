@@ -134,11 +134,15 @@ if (typeof window !== "undefined") {
 export default ({ data }) => {
   const headerInfo = data.allHeaderYaml.edges[0].node;
   const footerInfo = data.allFooterYaml.edges[0].node;
-  const sections = data.allSectionsYaml.edges.map(e => e.node);
+  const sections = data.allSectionsYaml.edges
+    .map(e => e.node)
+    .sort((x1, x2) => {
+      return x1.displayOrder - x2.displayOrder;
+    });
 
   const RenderSection = (sectionInfo, index) => {
     return (
-      <div className="manual-section" id={index}>
+      <div className="manual-section" id={index} key={index}>
         <h1 className="title">{sectionInfo.title}</h1>
         <Markdown>{sectionInfo.content}</Markdown>
       </div>
@@ -149,16 +153,20 @@ export default ({ data }) => {
     <div className="container">
       <div className="layout hidden blurred">
         <Header className="site-header">
-          <img src={logo} className="logo" />
-          <div className="user-manual-info">
-            <h1>{headerInfo.title}</h1>
-            <h3>{headerInfo.subtitle}</h3>
-            <p>
-              <b>{headerInfo.publicationDate}</b>
-            </p>
-            <p>
-              <b>{headerInfo.version}</b>
-            </p>
+          <div className="logo-container">
+            <img src={logo} className="logo" />
+          </div>
+          <div className="user-manual-info-container">
+            <div className="user-manual-info">
+              <h1>{headerInfo.title}</h1>
+              <h3>{headerInfo.subtitle}</h3>
+              <p>
+                <b>{headerInfo.publicationDate}</b>
+              </p>
+              <p>
+                <b>{headerInfo.version}</b>
+              </p>
+            </div>
           </div>
         </Header>
 
@@ -178,9 +186,6 @@ export default ({ data }) => {
         <div className="section">
           {sections
             .filter(sectionInfo => sectionInfo.published)
-            .sort((sectionInfo1, sectionInfo2) => {
-              return sectionInfo1.displayOrder > sectionInfo2.displayOrder;
-            })
             .map((sectionInfo, index) => RenderSection(sectionInfo, index))}
         </div>
 

@@ -9,77 +9,92 @@ header {
   max-height: $header-height-mobile;
   margin: 0;
 
+  .logo-container {
+    padding: 10px 30px;
+  }
   .logo {
     display: block;
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    width: 50vw;
+    margin: 0 auto;
+  }
+
+  .user-manual-info-container {
+    background-color: $brand-primary;
+    padding: 30px 20px;
+    color: white;
   }
 
   .user-manual-info {
-    background-color: $brand-primary;
-    color: white;
     text-align: center;
-    padding: 10px;
+    max-width: 960px;
+    margin: 0 auto;
 
     h1 {
-      margin: 15px 0 25px 0;
-      font-size: 30px;
+      font-size: 50px;
+      margin-bottom: 0px;
     }
 
     h3 {
-      margin: 10px 0 0 0;
-      font-size: 25px;
+      font-size: 40px;
+      margin-bottom: 25px;
     }
     p {
-      margin: 10px 0 0 0;
+      margin-bottom: 5px;
     }
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
 
-    padding-bottom: 20px;
+  @media (min-width: $breakpoint-md) {
+    .logo-container {
+      padding: 30px 0;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .logo {
+      margin: 0;
+      display: block;
+      width: 50vw;
+    }
+    .user-manual-info {
+      text-align: left;
+    }
   }
 
   @media (min-width: $breakpoint-lg) {
     .logo {
-      width: 40%;
+      width: 40vw;
     }
 
     .user-manual-info {
-      text-align: left;
-
       h1 {
-        margin: 15px 0 25px 30px;
         font-size: 60px;
       }
 
       h3 {
-        margin: 10px 0 0 30px;
         font-size: 35px;
       }
 
       p {
-        margin: 10px 0 0 30px;
       }
     }
   }
 
   @media (min-width: $breakpoint-xl) {
     .logo {
-      width: 30%;
+      width: 30vw;
     }
 
     .user-manual-info {
       h1 {
-        margin: 15px 0 25px 30px;
         font-size: 80px;
       }
 
       h3 {
-        margin: 10px 0 0 30px;
         font-size: 50px;
       }
       p {
-        margin: 10px 0 0 30px;
       }
     }
   }
@@ -87,10 +102,7 @@ header {
   @media print {
     .logo {
       display: block;
-      margin-top: 15px;
-      margin-left: auto;
-      margin-right: auto;
-      width: 75%;
+      width: 75vw;
     }
 
     .user-manual-info {
@@ -99,16 +111,13 @@ header {
       text-align: center;
 
       h1 {
-        margin: 15px 0 25px 0;
         font-size: 30px;
       }
 
       h3 {
-        margin: 10px 0 0 0;
         font-size: 25px;
       }
       p {
-        margin: 10px 0 0 0px;
       }
     }
   }

@@ -19,13 +19,12 @@ body,
 
   .table-heading {
     font-size: 20px;
-    margin: 0 0 10px 0;
     text-align: center;
+    margin-bottom: 0px;
   }
 
   .toc-item-section {
-    margin: 0 20px 10px 20px;
-
+    margin-top: 20px;
     a {
       font-size: 25px;
       color: $brand-primary;
@@ -34,13 +33,12 @@ body,
     }
 
     a:hover {
-      color: $brand-highlight;
+      color: lighten($brand-primary, 15);
     }
   }
 
   .toc-item-sub-section {
-    margin: 0 35px 10px 35px;
-
+    margin-left: 30px;
     a {
       font-size: 20px;
       color: $brand-primary;
@@ -48,51 +46,39 @@ body,
     }
 
     a:hover {
-      color: $brand-highlight;
+      color: lighten($brand-primary, 15);
     }
   }
 }
 
 @media (min-width: $breakpoint-md) {
   .table-of-contents {
-    padding: 30px;
-
     .table-heading {
       font-size: 200px;
-      margin: 0 0 100px 0;
       text-align: left;
     }
 
     .toc-item-section {
-      margin: 0 40px 15px 40px;
     }
 
     .toc-item-sub-section {
-      margin: 0 70px 10px 70px;
     }
   }
 }
 
 @media (min-width: $breakpoint-xl) {
   .table-of-contents {
-    padding: 40px;
-
     .table-heading {
       font-size: 20px;
-      margin: 0 0 10px 0;
     }
 
     .toc-item-section {
-      margin: 0 60px 15px 60px;
-
       a {
         font-size: 30px;
       }
     }
 
     .toc-item-sub-section {
-      margin: 0 100px 10px 100px;
-
       a {
         font-size: 25px;
       }
@@ -102,24 +88,17 @@ body,
 
 @media (min-width: $breakpoint-xxl) {
   .table-of-contents {
-    padding: 40px;
-
     .table-heading {
       font-size: 20px;
-      margin: 0 0 10px 0;
     }
 
     .toc-item-section {
-      margin: 0 80px 15px 80px;
-
       a {
         font-size: 30px;
       }
     }
 
     .toc-item-sub-section {
-      margin: 0 130px 10px 130px;
-
       a {
         font-size: 25px;
       }
@@ -129,11 +108,9 @@ body,
 
 @media print {
   .table-of-contents {
-    margin: 35px 50px 35px 50px;
     padding: 0px;
 
     .table-heading {
-      margin: 0 0 5px 0;
       display: block;
       page-break-before: always;
       position: relative;
@@ -146,11 +123,9 @@ body,
     }
 
     .toc-item-section {
-      margin: 0 20px 5px 20px;
     }
 
     .toc-item-sub-section {
-      margin: 0 35px 5px 35px;
     }
   }
 }
