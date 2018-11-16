@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import Sections from "../components/sections";
 import Markdown from "markdown-to-jsx";
 
 import UpArrowIcon from "react-icons/lib/fa/arrow-circle-o-up";
