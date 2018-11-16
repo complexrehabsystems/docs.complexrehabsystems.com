@@ -172,7 +172,8 @@ export default ({ data }) => {
         </Header>
 
         <a id="top-link" href="#">
-          <UpArrowIcon />;<h2>Top</h2>
+          <UpArrowIcon />
+          <h2>Top</h2>
         </a>
 
         {/* Render table of contents */}

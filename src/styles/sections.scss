@@ -4,153 +4,24 @@ $header-height-mobile: 245vh;
 $header-height-desktop: 30vh;
 
 .section {
-    background-color: white;
+  background-color: white;
+  padding: 25px;
 
+  .manual-section {
+    .title {
+      font-size: 35px;
+      color: $brand-highlight;
+      text-align: left;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  .section {
     .manual-section {
-        .title {
-            font-size: 35px;
-            color: $brand-highlight;
-            text-align: left;
-            margin: 0 50px 15px 50px;
-        }
-
-        .section-content {
-            font-size: 15px;
-            margin: 0 50px 50px 50px;
-
-            h2 {
-                font-size: 20px;
-                margin: 20px 0 10px 0;
-            }
-
-            p {
-                margin: 0;
-
-                img {
-                    background-color: lightgray;
-                }
-            }
-
-            ol {
-                margin: 0 10px 0 10px;
-            }
-
-            ul {
-                margin: 0 10px 0 10px;
-            }
-
-            li {
-                margin: 0 0 5px 0;
-            }
-        }
+      .title {
+        font-size: 40px;
+      }
     }
-}
-
-@media(min-width: $breakpoint-md) {
-    .section {
-
-        .manual-section {
-            .title {
-                font-size: 40px;
-                margin: 0 100px 20px 100px;
-            }
-
-            .section-content {
-                margin: 0 100px 60px 100px;
-
-                h2 {
-                    font-size: 25px;
-                    margin: 30px 0 10px 0;
-                }
-
-                p {
-                    margin: 0 0 5px 0;
-                }
-
-                li {
-                    margin: 0 0 10px 0;
-                }
-            }
-        }
-    }
-}
-
-@media(min-width: $breakpoint-xl) {
-    .section {
-
-        .manual-section {
-
-            .title {
-                font-size: 50px;
-                margin: 0 200px 25px 200px;
-            }
-
-            .section-content {
-                margin: 0 200px 70px 200px;
-
-                h2 {
-                    font-size: 30px;
-                    margin: 40px 0 15px 0;
-                }
-
-                p {
-                    margin: 0 0 5px 0;
-                }
-
-                li {
-                    margin: 0 0 10px 0;
-                }
-            }
-        }
-    }
-}
-
-@media(min-width: $breakpoint-xxl) {
-    .section {
-
-        .manual-section {
-            margin: auto;
-            width: 60%;
-
-            .title {
-                font-size: 55px;
-                margin: 0 0 25px 0;
-            }
-
-            .section-content {
-                font-size: 20px;
-                margin: 0 0 80px 0;
-
-                h2 {
-                    font-size: 35px;
-                    margin: 50px 0 15px 0;
-                }
-
-                p {
-                    margin: 0 0 5px 0;
-                }
-
-                li {
-                    margin: 0 0 15px 0;
-                }
-            }
-        }
-    }
-}
-
-@media print {
-    .section {
-        .manual-section {
-            .section-content {
-                p {
-                    img {
-                        display: block;
-                        width: 75%;
-                        margin-left: auto;
-                        margin-right: auto;
-                    }
-                }
-            }
-        }
-    }
+  }
 }
