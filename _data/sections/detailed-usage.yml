@@ -148,7 +148,7 @@ content: >-
 
   4. Once a view has been set, cycle through all of the views
   (Front/Left/Right/etc.) by clicking on them individually (Top, Left, etc.) and
-  adjust alignment if necessary using first the **Edit** button then
+  adjust alignment if necessary, using first the **Edit** button then
   corresponding **Set** option.
 
   5. After the views are configured, users can collapse the Set Views controls
@@ -317,6 +317,5 @@ content: >-
   Users can download the evaluation data as a PDF report by clicking the Save as
   PDF button when viewing an evaluation.  The system will prompt a title
   indicating a portion of the Client's name and the date of the evaluation.
-
 published: true
 displayOrder: 4
