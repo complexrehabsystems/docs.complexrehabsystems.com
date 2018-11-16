@@ -289,7 +289,9 @@ content: >-
   * Users may also choose to exclude attachments in PDF reports by switching the
   toggle (next to the description box) to the off position.  The system defaults
   to the on position.
-    Click save to update.
+
+  * Click save to update.
+
 
   ## Scratchpad
 
