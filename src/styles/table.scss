@@ -9,10 +9,13 @@ body,
   float: none;
 }
 
-.table-of-contents {
-  margin: 0 0 50px 0;
-  padding: 20px;
+.table-of-contents-container {
   background-color: $brand-light;
+  padding: 20px;
+}
+.table-of-contents {
+  max-width: 960px;
+  margin: 10px auto;
 
   .table-heading {
     font-size: 20px;
@@ -52,7 +55,6 @@ body,
 
 @media (min-width: $breakpoint-md) {
   .table-of-contents {
-    margin: 0 0 60px 0;
     padding: 30px;
 
     .table-heading {
@@ -73,7 +75,6 @@ body,
 
 @media (min-width: $breakpoint-xl) {
   .table-of-contents {
-    margin: 0 0 70px 0;
     padding: 40px;
 
     .table-heading {
@@ -101,7 +102,6 @@ body,
 
 @media (min-width: $breakpoint-xxl) {
   .table-of-contents {
-    margin: 0 0 70px 0;
     padding: 40px;
 
     .table-heading {

@@ -318,11 +318,5 @@ content: >-
   PDF button when viewing an evaluation.  The system will prompt a title
   indicating a portion of the Client's name and the date of the evaluation.
 
-
-  <br>
-
-  <hr>
-
-  <br>
 published: true
 displayOrder: 4

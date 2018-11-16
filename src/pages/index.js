@@ -145,15 +145,6 @@ export default ({ data }) => {
     );
   };
 
-  const RenderTableOfContents = (sectionInfo, index) => {
-    const link = "#" + formatString(sectionInfo.title);
-    return (
-      <div className="table-contents">
-        <a href={link}>{sectionInfo.title}</a>
-      </div>
-    );
-  };
-
   return (
     <div className="container">
       <div className="layout hidden blurred">
@@ -177,8 +168,10 @@ export default ({ data }) => {
         </a>
 
         {/* Render table of contents */}
-        <div className="table-of-contents">
-          <div className="spinner" />
+        <div className="table-of-contents-container">
+          <div className="table-of-contents">
+            <div className="spinner" />
+          </div>
         </div>
 
         {/* Render all sections of the manual from our CMS */}
