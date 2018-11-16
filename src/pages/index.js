@@ -176,7 +176,7 @@ export default ({ data }) => {
         </a>
 
         {/* Render table of contents */}
-        <div className="table-of-contents-container">
+        <div className="table-of-contents-container force-pagebreak-before">
           <div className="table-of-contents">
             <div className="spinner" />
           </div>
