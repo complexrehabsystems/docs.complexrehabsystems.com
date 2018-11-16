@@ -15,22 +15,37 @@ collections:
         name: "siteHeader"
         file: "_data/header/header.yml"
         fields:
-          - {label: "Title", name: "title", string: ""}
-          - {label: "Subtitle", name: "subtitle", string: ""}
-          - {label: "Publication Date", name: "publicationDate", string: ""}
+          - { label: "Title", name: "title", string: "" }
+          - { label: "Subtitle", name: "subtitle", string: "" }
+          - { label: "Version", name: "version", string: "" }
+          - { label: "Publication Date", name: "publicationDate", string: "" }
       - label: "Footer"
         name: "siteFooter"
         file: "_data/footer/footer.yml"
         fields:
-          - {label: "copyright", name: "copyright", widget: "string"}
-          - {label: "address", name: "address", widget: "string"}
+          - { label: "copyright", name: "copyright", widget: "string" }
+          - { label: "address", name: "address", widget: "string" }
   - label: "Sections"
     name: "sections"
     folder: "_data/sections"
     format: "yaml"
     create: true
     fields:
-      - {label: "Section Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Section Content", name: "content", widget: "markdown"}
-      - {label: "Section Published", name: "published", widget: "boolean", default: false}
-      - {label: "Section Display Order", name: "displayOrder", widget: "number"}
+      - {
+          label: "Section Title",
+          name: "title",
+          widget: "string",
+          tagname: "h1",
+        }
+      - { label: "Section Content", name: "content", widget: "markdown" }
+      - {
+          label: "Section Published",
+          name: "published",
+          widget: "boolean",
+          default: false,
+        }
+      - {
+          label: "Section Display Order",
+          name: "displayOrder",
+          widget: "number",
+        }
