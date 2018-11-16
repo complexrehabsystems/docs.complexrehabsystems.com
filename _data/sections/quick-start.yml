@@ -1,8 +1,8 @@
 title: Quick Start
 content: >-
-  This is a set of instructions covering the entire CRS workflow. These are
-  not step by step instructions; more detailed instructions are provided later
-  in the Detailed Usage sections.
+  This is a set of instructions covering the entire CRS workflow. These are not
+  step by step instructions; more detailed instructions are provided later in
+  the Detailed Usage sections.
 
 
   ## Step One: Create a new client
@@ -28,8 +28,8 @@ content: >-
   ## Step Three: Create an Eval Form
 
 
-  Each evaluation opens to Clicinal Evaluations tab.  Each evaluation has
-  several tabs worth of data (see tabs below header). On the Clincial
+  Each evaluation opens to Clinical Evaluations tab.  Each evaluation has
+  several tabs worth of data (see tabs below header). On the Clinical
   Evaluations tab, users can open sections to enter information.
 
 
@@ -157,6 +157,5 @@ content: >-
   The evaluation is saved as a PDF report by clicking the Save as PDF button. 
   This button is visible in all tabs of the evaluation.  Choose the destination
   to save it to, enter the desired file name and click save.
-
 published: true
 displayOrder: 3
