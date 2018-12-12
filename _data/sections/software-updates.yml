@@ -2,12 +2,14 @@ title: Software Updates
 content: >-
   ### Download the latest version of CrsApp:
 
+
   * no updates currently available
 
   * (latest) v1.4.9.0 : (download link not available)
 
 
   ### Unzip the file:
+
 
   * Open windows File Explorer
 
@@ -19,6 +21,7 @@ content: >-
 
   ### Run the `Add-AppDevPackage` script with Powershell
 
+
   * Navigate to the unzipped contents of the zip archive (e.g.
   `c:\Users\username\Downloads\CrsApp.UWP_1.4.9.0_Debug_Test`)
 
@@ -28,12 +31,14 @@ content: >-
 
   * This will open a blue terminal window. 
 
+  * Enter "y" and press Enter
+
   * Press Enter to continue if prompted. 
 
   * Installation will take a few moments. Please do not close the window until
   the operation is complete.
 
 
-  ### Installation is now complete
+  ### Installation is now complete; open application as normal.
 published: true
 displayOrder: 999
