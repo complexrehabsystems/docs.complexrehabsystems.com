@@ -5,7 +5,7 @@ content: >-
 
   * no updates currently available
 
-  * (latest) v1.4.9.0 : (download link not available)
+  * (latest) v1.5.10.0 : (download link not available)
 
 
   ### Unzip the file:
@@ -14,7 +14,7 @@ content: >-
   * Open windows File Explorer
 
   * Navigate to the .zip file (e.g.
-  `c:\Users\username\Downloads\CrsApp.UWP_1.4.9.0_Debug_Test.zip`)
+  `c:\Users\username\Downloads\CrsApp.UWP_1.5.10.0_Debug_Test.zip`)
 
   * Right-click the .zip file and select `Extract all...`
 
@@ -23,7 +23,7 @@ content: >-
 
 
   * Navigate to the unzipped contents of the zip archive (e.g.
-  `c:\Users\username\Downloads\CrsApp.UWP_1.4.9.0_Debug_Test`)
+  `c:\Users\username\Downloads\CrsApp.UWP_1.5.10.0_Debug_Test`)
 
   * This directory should contain a file called `Add-AppDevPackage`
 
@@ -31,9 +31,9 @@ content: >-
 
   * This will open a blue terminal window. 
 
-  * Enter "y" and press Enter
+  * You may be prompted to enter "y" and press Enter.
 
-  * Press Enter to continue if prompted. 
+  * Press Enter to continue when prompted. (Separate from the above "Enter").
 
   * Installation will take a few moments. Please do not close the window until
   the operation is complete.  (The window will auto-close when complete.)
