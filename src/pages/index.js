@@ -60,9 +60,9 @@ function unlock(e) {
   e.preventDefault();
   var password = document.getElementById("password").value;
 
-  if (hash(password) === 1032675042) {
+  if (hash(password) === 1032675042 || hash(password) === -845750842) {
     hideOverlay();
-    document.cookie = "authorized=true";
+    document.cookie = "authorized=true;max-age=31536000";
   } else {
     let errorMsg = document.getElementById("unlock-failed");
     errorMsg.classList.remove("hidden");
