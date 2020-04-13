@@ -74,6 +74,8 @@ function unlock(e) {
 
 if (typeof window !== "undefined") {
 
+  console.log("BANANAS");
+
   if(window.hash === "#signup")
     window.location.href = "https://complexrehabsystems.com/#signup";
 
