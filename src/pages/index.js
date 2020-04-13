@@ -76,8 +76,12 @@ if (typeof window !== "undefined") {
 
   console.log("BANANAS");
 
-  if(window.hash === "#signup")
+  if(window.location.hash === "#signup"){
+    console.log("PINEAPPLES");
     window.location.href = "https://complexrehabsystems.com/#signup";
+  } else {
+    console.log(window.location.hash)
+  }
 
   require("smooth-scroll")('a[href*="#"]');
   window.addEventListener(
