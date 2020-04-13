@@ -73,6 +73,10 @@ function unlock(e) {
 }
 
 if (typeof window !== "undefined") {
+
+  if(window.hash === "#signup")
+    window.location.href = "https://complexrehabsystems.com/#signup";
+
   require("smooth-scroll")('a[href*="#"]');
   window.addEventListener(
     "scroll",
